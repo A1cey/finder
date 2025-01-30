@@ -1,6 +1,6 @@
 #![deny(clippy::unwrap_used, clippy::expect_used)]
 
-use std::{collections::VecDeque, error::Error, path::Path};
+use std::{error::Error, path::PathBuf};
 
 use input::Input;
 
@@ -9,10 +9,6 @@ mod input;
 mod search;
 
 fn main() {
-    let args = std::env::args().collect::<VecDeque<_>>();
-
-    println!("{args:#?}");
-
     match Input::get_args().and_then(|input| search::search(&input.pattern, input.selected_drives))
     {
         Ok(res) => handle_result(res),
@@ -21,11 +17,11 @@ fn main() {
 }
 
 fn handle_error(error: Box<dyn Error>) {
-    println!("{error}");
+    eprintln!("{error}");
 }
 
-fn handle_result(result: Vec<Box<Path>>) {
+fn handle_result(result: Vec<PathBuf>) {
     result
         .into_iter()
-        .for_each(|path| println!("{}", path.display()));
+        .for_each(|path| eprintln!("{}", path.display()));
 }

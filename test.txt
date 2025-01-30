@@ -1,0 +1,1177 @@
+[
+    "target\\debug\\finder.exe",
+    ".txt",
+    "-d",
+    "M:\\",
+]
+Searching ...
+searching
+M:\$RECYCLE.BIN\S-1-5-21-3986472353-716569401-189248924-1001\$I7LCPT2.txt
+M:\$RECYCLE.BIN\S-1-5-21-3986472353-716569401-189248924-1001\$IE0YNHV.txt
+M:\$RECYCLE.BIN\S-1-5-21-3986472353-716569401-189248924-1001\$R7LCPT2.txt
+M:\$RECYCLE.BIN\S-1-5-21-3986472353-716569401-189248924-1001\$RE0YNHV.txt
+M:\Games\HogwartsLegacy\Phoenix\Content\Data\Version\DA_Version.txt
+M:\programming\DHBW\DHBW-Programming\out\production\DHBW-Programming\de\dhbwka\java\exercise\collections\library.txt
+M:\programming\DHBW\DHBW-Programming\out\production\DHBW-Programming\de\dhbwka\java\exercise\java8\numberGuess\stat.txt
+M:\programming\DHBW\DHBW-Programming\out\production\DHBW-Programming\de\dhbwka\java\exercise\java8\soccer\33_Java8_Aufgaben_TeamDE.txt
+M:\programming\DHBW\DHBW-Programming\out\production\DHBW-Programming\de\dhbwka\java\exercise\ui\event\scoreboardNumberGuess.txt
+M:\programming\DHBW\DHBW-Programming\out\production\DHBW-Programming\de\dhbwka\java\exercise\ui\event\scoreboardShellGame.txt
+M:\programming\DHBW\DHBW-Programming\out\production\DHBW-Programming\de\dhbwka\java\theoreticalIT\hashingResults.txt
+M:\programming\DHBW\DHBW-Programming\out\production\DHBW-Programming\de\dhbwka\java\theoreticalIT\sortingResults.txt
+M:\programming\DHBW\DHBW-Programming\src\de\dhbwka\java\exercise\collections\library.txt
+M:\programming\DHBW\DHBW-Programming\src\de\dhbwka\java\exercise\java8\numberGuess\stat.txt
+M:\programming\DHBW\DHBW-Programming\src\de\dhbwka\java\exercise\java8\soccer\33_Java8_Aufgaben_TeamDE.txt
+M:\programming\DHBW\DHBW-Programming\src\de\dhbwka\java\exercise\ui\event\scoreboardNumberGuess.txt
+M:\programming\DHBW\DHBW-Programming\src\de\dhbwka\java\exercise\ui\event\scoreboardShellGame.txt
+M:\programming\DHBW\DHBW-Programming\src\de\dhbwka\java\theoreticalIT\hashingResults.txt
+M:\programming\DHBW\DHBW-Programming\src\de\dhbwka\java\theoreticalIT\sortingResults.txt
+M:\programming\DHBW\Probe-Klausur-1-Darts-Counter\17_ProbePE_Sem1_DartsCounter_Download\checkouts.txt
+M:\programming\DHBW\Probe-Klausur-2-jBay\out\production\Probe-Klausur-2\auktionen.txt
+M:\programming\DHBW\Probe-Klausur-2-jBay\src\auktionen.txt
+M:\programming\DHBW\Probe-Klausur-3-Speedy-Quiz\questions.txt
+M:\programming\DHBW\Probe-Klausur-4-CHORona\DELTA-9-7-5-0.txt
+M:\programming\DHBW\Probe-Klausur-4-CHORona\GAMMA-7-8-6-21.txt
+M:\programming\DHBW\Probe-Klausur-4-CHORona\pollutantfactors.txt
+M:\programming\DHBW\Probe-Klausur-5-DBVasion\connections.txt
+M:\programming\DHBW\Probe-Klausur-5-DBVasion\IC-2036.txt
+M:\programming\DHBW\Probe-Klausur-5-DBVasion\ICE-1171.txt
+M:\programming\DHBW\Probe-Klausur-5-DBVasion\ICE-509.txt
+M:\programming\DHBW\Probe-Klausur-5-DBVasion\IRE-19673.txt
+M:\programming\DHBW\Probe-Klausur-5-DBVasion\SBB-V.txt
+M:\programming\DHBW\Probe-Klausur-5-DBVasion\SWB-E.txt
+M:\programming\DHBW\Probe-Klausur-5-DBVasion\tickets.txt
+M:\programming\DHBW\Probe-Klausur-6-SnatChat\src\snatchat\GansGeheim.txt
+M:\programming\DHBW\Probe-Klausur-8-Stadt-Land-Fluss\validwords.txt
+M:\programming\finder\test.txt
+M:\programming\game_website\game_website\node_modules\@isaacs\cliui\LICENSE.txt
+M:\programming\game_website\game_website\node_modules\cssesc\LICENSE-MIT.txt
+M:\programming\game_website\game_website\node_modules\deepmerge\license.txt
+M:\programming\game_website\game_website\node_modules\emoji-regex\LICENSE-MIT.txt
+M:\programming\game_website\game_website\node_modules\esquery\license.txt
+M:\programming\game_website\game_website\node_modules\jquery\AUTHORS.txt
+M:\programming\game_website\game_website\node_modules\jquery\LICENSE.txt
+M:\programming\game_website\game_website\node_modules\punycode\LICENSE-MIT.txt
+M:\programming\game_website\game_website\node_modules\signal-exit\LICENSE.txt
+M:\programming\game_website\game_website\node_modules\string-width-cjs\node_modules\emoji-regex\LICENSE-MIT.txt
+M:\programming\game_website\game_website\node_modules\tslib\CopyrightNotice.txt
+M:\programming\game_website\game_website\node_modules\tslib\LICENSE.txt
+M:\programming\game_website\game_website\node_modules\typescript\LICENSE.txt
+M:\programming\game_website\game_website\node_modules\typescript\ThirdPartyNoticeText.txt
+M:\programming\game_website\game_website\node_modules\whatwg-url\LICENSE.txt
+M:\programming\game_website\game_website\node_modules\wrap-ansi-cjs\node_modules\string-width\node_modules\emoji-regex\LICENSE-MIT.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-11T20-21-40\2020-11-11T20-21-40_netlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-11T20-21-40\2020-11-11T20-21-40_r3dlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-11T20-33-04\2020-11-11T20-33-04_netlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-11T20-33-04\2020-11-11T20-33-04_r3dlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-11T20-52-36\2020-11-11T20-52-36_netlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-11T20-52-36\2020-11-11T20-52-36_r3dlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-14T20-03-33\2020-11-14T20-03-33_netlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-14T20-03-33\2020-11-14T20-03-33_r3dlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-14T20-20-57\2020-11-14T20-20-57_netlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-14T20-20-57\2020-11-14T20-20-57_r3dlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-14T20-54-44\2020-11-14T20-54-44_netlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-14T20-54-44\2020-11-14T20-54-44_r3dlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-15T19-20-54\2020-11-15T19-20-54_netlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-15T19-20-54\2020-11-15T19-20-54_r3dlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-15T19-59-03\2020-11-15T19-59-03_netlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-15T19-59-03\2020-11-15T19-59-03_r3dlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-15T20-42-29\2020-11-15T20-42-29_netlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-15T20-42-29\2020-11-15T20-42-29_r3dlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-15T21-20-17\2020-11-15T21-20-17_netlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2020-11-15T21-20-17\2020-11-15T21-20-17_r3dlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2022-03-21T20-07-59\2022-03-21T20-07-59_netlog.txt
+M:\Riot Games\League of Legends\Logs\GameLogs\2022-03-21T20-07-59\2022-03-21T20-07-59_r3dlog.txt
+M:\Riot Games\Riot Client\RiotClientElectron\LICENSE.electron.txt
+M:\Riot Games\VALORANT\live\Manifest_DebugFiles_Win64.txt
+M:\Riot Games\VALORANT\live\Manifest_NonUFSFiles_Win64.txt
+M:\Riot Games\VALORANT\live\VALORANT\live\Manifest_DebugFiles_Win64.txt
+M:\Riot Games\VALORANT\live\VALORANT\live\Manifest_NonUFSFiles_Win64.txt
+M:\SteamLibrary\steamapps\common\Aim Lab\AimLab_tb_Data\Plugins\Steamworks.NET.txt
+M:\SteamLibrary\steamapps\common\Aim Lab\AimLab_tb_Data\Plugins\x86_64\VuplexWebViewChromium\log-chromium.txt
+M:\SteamLibrary\steamapps\common\Aim Lab\AimLab_tb_Data\StreamingAssets\CrosshairSettings.txt
+M:\SteamLibrary\steamapps\common\Aim Lab\AimLab_tb_Data\StreamingAssets\OneVsOnePrototype\placeHolder.txt
+M:\SteamLibrary\steamapps\common\Apex Legends\build.txt
+M:\SteamLibrary\steamapps\common\Apex Legends\gameversion.txt
+M:\SteamLibrary\steamapps\common\Apex Legends\LiveAPI\readme.txt
+M:\SteamLibrary\steamapps\common\Apex Legends\media\ftu_intro_captions.txt
+M:\SteamLibrary\steamapps\common\Apex Legends\media\ftu_intro_int_captions.txt
+M:\SteamLibrary\steamapps\common\Apex Legends\media\intro_captions.txt
+M:\SteamLibrary\steamapps\common\Apex Legends\media\intro_dayzero_captions.txt
+M:\SteamLibrary\steamapps\common\Apex Legends\media\startupvids.txt
+M:\SteamLibrary\steamapps\common\Apex Legends\media\startupvids_switch.txt
+M:\SteamLibrary\steamapps\common\Apex Legends\r2\playlists_r5.txt
+M:\SteamLibrary\steamapps\common\ChainedTogether\ChainedTogether\Binaries\Win64\steam_appid.txt
+M:\SteamLibrary\steamapps\common\ChainedTogether\Manifest_NonUFSFiles_Win64.txt
+M:\SteamLibrary\steamapps\common\ChainedTogether\Manifest_UFSFiles_Win64.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round00.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round01.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round02.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round03.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round04.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round05.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round06.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round07.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round08.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round09.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round10.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round11.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round12.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round13.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round14.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round15.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round16.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round17.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round18.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round19.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round20.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round21.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round22.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round23.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round24.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round25.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round26.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round27.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round28.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\backup_round29.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\server_blacklist.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\ugc_collection_cache.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\bin\built_from_cl.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\bin\content_built_from_cl.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\steam_appid.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\bugreporter\config.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\bugreporter\sdk_config.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\colors\shared_colors.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\demoinfo2\demoinfo2.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\entityreport\dota_colors.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\faceposer\default_channels_template.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\fonts\tools_font_manifest.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\keybindings\animgraph_editor_key_bindings.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\keybindings\assetbrowser_key_bindings.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\keybindings\global_key_bindings.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\keybindings\hammer_key_bindings.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\keybindings\helpsystem_key_bindings.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\keybindings\modeldoc_editor_key_bindings.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\keybindings\pet_key_bindings.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\keybindings\postprocess_editor_key_bindings.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\keybindings\propertyeditor_key_bindings.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\keybindings\shared_tool_key_bindings.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\keybindings\subrecteditor_key_bindings.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\keybindings\workshop_manager_key_bindings.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\met\met_configuration.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\model_skeleton_types.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\core\tools\sdk_vconsole_subtools.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\csgo\backup_round00.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\game\thirdpartylegalnotices.txt
+M:\SteamLibrary\steamapps\common\Counter-Strike Global Offensive\steam_appid.txt
+M:\SteamLibrary\steamapps\common\FPS Chess\steam_appid.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\platform_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\platform_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\platform_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\platform_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\platform_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\platform_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\platform_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\platform_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\platform_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\platform_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\platform_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\platform_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\platform_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\vgui_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\vgui_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\vgui_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\vgui_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\vgui_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\vgui_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\vgui_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\vgui_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\vgui_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\vgui_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\vgui_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\vgui_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\resource\vgui_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\servers\serverbrowser_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\servers\serverbrowser_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\servers\serverbrowser_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\servers\serverbrowser_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\servers\serverbrowser_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\servers\serverbrowser_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\servers\serverbrowser_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\servers\serverbrowser_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\servers\serverbrowser_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\servers\serverbrowser_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\servers\serverbrowser_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\servers\serverbrowser_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\servers\serverbrowser_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life\platform\servers\serverbrowser_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life\readme.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\1024_textscheme.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\1152_textscheme.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\1280_textscheme.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\1600_textscheme.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\640_textscheme.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\800_textscheme.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\credits.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\mapcycle.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\media\StartupVids.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\overviews\boot_camp.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\overviews\bounce.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\overviews\crossfire.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\overviews\datacore.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\overviews\frenzy.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\overviews\lambda_bunker.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\overviews\rapidcore.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\overviews\snark_pit.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\overviews\stalkyard.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\overviews\subtransit.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\overviews\undertow.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\resource\BackgroundLayout.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\resource\BackgroundLoadingLayout.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\resource\gameui_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\resource\HD_BackgroundLayout.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\resource\HD_BackgroundLoadingLayout.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\resource\valve_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\scripts\voicemodel.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sound\materials.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sound\sentences.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\spectatormenu.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\spectcammenu.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\hud.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_357.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_9mmar.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_9mmhandgun.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_crossbow.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_crowbar.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_egon.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_gauss.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_handgrenade.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_hornetgun.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_question.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_rpg.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_satchel.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_shotgun.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_snark.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\sprites\weapon_tripmine.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\steam_appid.txt
+M:\SteamLibrary\steamapps\common\Half-Life\valve\titles.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\bin\basehaptics.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\bin\filters\dispfilters.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\bin\sdkenginetools.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\gameinfo.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\media\startupvids.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\closecaption_ukrainian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\ep2\resource\ep2_ukrainian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\gameinfo.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\closecaption_ukrainian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\episodic\resource\episodic_ukrainian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\cfg\pure_server_full.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\cfg\pure_server_whitelist_example.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\cfg\server_blacklist.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\cfg\sfm_defaultanimationgroups.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\cfg\trusted_keys_base.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\cfg\trusted_keys_example.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\gameinfo.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\media\startupvids.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\boxrocket_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_ukrainian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\chat_vietnamese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\closecaption_ukrainian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\deck_vietnamese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\dmecontrols_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_ukrainian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\gameui_vietnamese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\hl2_ukrainian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\itemtest_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\mp3player_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\mp3settings.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\replay_ukrainian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\toolactbusy_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\toolcommedit_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\toolfoundry_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\toolpet_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\toolshared_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\toolvcdblock_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\toolvmt_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_ukrainian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\valve_vietnamese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\resource\youtube_ukrainian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\actbusy.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\actremap.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\bonus_maps_manifest.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\bugreporter_defaults.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\chapterbackgrounds.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\cheatcodes.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\credits.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\debugoptions.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\decals_subrect.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\dsp_presets.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\effects\testeffect.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\gamehaptics.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\gameuianimations.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\game_sounds.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\game_sounds_ambient_generic.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\game_sounds_header.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\game_sounds_items.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\game_sounds_manifest.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\game_sounds_physics.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\game_sounds_player.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\game_sounds_ui.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\game_sounds_vehicles.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\game_sounds_weapons.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\game_sounds_world.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\global_actors.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\hudanimations.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\hud_textures.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_breencast.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_canals.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_canals2.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_citadel.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_coast.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_e3_bugbait.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_e3_c17.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_e3_lab.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_e3_town.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_eli_lab.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_k_lab.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_k_lab2.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_music.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_novaprospekt.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_ravenholm.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_ravenholm2.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_streetwar.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_streetwar2.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\level_sounds_trainyard.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\mapautocompile.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\newbindings.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_alyx.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_antlion.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_antlionguard.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_attackheli.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_barnacle.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_barney.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_birds.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_blackheadcrab.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_citizen.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_combinecamera.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_combine_ball.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_combine_mine.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_dog.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_dropship.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_eli.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_env_headcrabcanister.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_fastheadcrab.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_fastzombie.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_gman.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_gunship.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_headcrab.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_ichthyosaur.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_manhack.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_metropolice.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_poisonzombie.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_rollermine.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_scanner.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_sniper.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_soldier.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_stalker.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_strider.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_turret.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_vortigaunt.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\npc_sounds_zombie.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\plugin_animations.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\propdata.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\sentences.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\soundmixers.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\soundscapes.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\soundscapes_canals.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\soundscapes_citadel.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\soundscapes_coast.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\soundscapes_elab.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\soundscapes_klab.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\soundscapes_manifest.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\soundscapes_prison.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\soundscapes_streetwar.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\soundscapes_town.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\soundscapes_trainyard.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\surfaceproperties.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\surfaceproperties_hl2.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\surfaceproperties_manifest.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\interjections.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\nags.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\nags_canals.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\nags_citadel.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\nags_eli_lab.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\nags_k_lab.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\nags_prison.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\nags_trainyard.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\npc_alyx.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\npc_barney.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\npc_citizen.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\npc_citizen_c17.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\npc_citizen_canals.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\npc_citizen_coast.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\npc_citizen_commandermode.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\npc_citizen_tenement.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\npc_citizen_terminal.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\npc_combine.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\npc_grigori.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\npc_vortigaunt.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\response_eli_lab.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\response_k_lab.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\response_rules.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\talker\terminal_pa.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\titles.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\vehicles\airboat.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\vehicles\apc.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\vehicles\apc_npc.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\vehicles\cannon.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\vehicles\crane.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\vehicles\digger.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\vehicles\driveway.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\vehicles\fastdigger.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\vehicles\jeep_test.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\vehicles\jetski.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\vehicles\prisoner_pod.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\vehicles\reference_vehicle.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\vgui_screens.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_357.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_alyxgun.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_annabelle.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_ar2.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_bugbait.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_citizenpackage.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_citizensuitcase.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_crossbow.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_crowbar.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_cubemap.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_frag.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_manifest.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_physcannon.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_physgun.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_pistol.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_rpg.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_shotgun.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_smg1.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2\scripts\weapon_stunstick.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\gameinfo.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\gamestate.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\media\ep1_recap_bink_settings.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\media\startupvids.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\merged_loc_all.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_ukrainian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\resource\rich_presence_vietnamese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\hl2_complete\stats.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\gameinfo.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\closecaption_ukrainian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_latam.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\lostcoast\resource\lostcoast_ukrainian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\admin_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\admin\server_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\linux_fonts\notosanscjk-regular_license.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\linux_fonts\notosansthai_license.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\platform_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\resource\vgui_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_brazilian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_bulgarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_czech.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_danish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_dutch.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_english.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_finnish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_french.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_german.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_greek.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_hungarian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_italian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_japanese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_korean.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_koreana.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_norwegian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_polish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_portuguese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_romanian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_russian.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_schinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_spanish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_swedish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_tchinese.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_thai.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\platform\servers\serverbrowser_turkish.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\steam_appid.txt
+M:\SteamLibrary\steamapps\common\Half-Life 2\thirdpartylegalnotices.txt
+M:\SteamLibrary\steamapps\common\Hollow Knight\hollow_knight_Data\StreamingAssets\StreamingAssets.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\steam_appid.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\Support\mnfst.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\Deluxe\Support\mnfst.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\cs_CZ.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\de_DE.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\en_US.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\es_ES.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\es_MX.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\fr_FR.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\it_IT.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\ja_JP.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\ko_KR.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\nl_NL.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\no_NO.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\pl_PL.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\pt_BR.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\pt_PT.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\ru_RU.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\sv_SE.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\zh_CN.txt
+M:\SteamLibrary\steamapps\common\Jedi Fallen Order\__Installer\directx\eula\zh_TW.txt
+M:\SteamLibrary\steamapps\common\Paladins\Binaries\EasyAntiCheat\Licenses\Apache-2.0.txt
+M:\SteamLibrary\steamapps\common\Paladins\Binaries\EasyAntiCheat\Licenses\CCO-1.0.txt
+M:\SteamLibrary\steamapps\common\Paladins\Binaries\EasyAntiCheat\Licenses\LGPL-2.1.txt
+M:\SteamLibrary\steamapps\common\Paladins\Binaries\EasyAntiCheat\Licenses\Licenses.txt
+M:\SteamLibrary\steamapps\common\Paladins\Binaries\EasyAntiCheat\Licenses\MIT.txt
+M:\SteamLibrary\steamapps\common\Paladins\Binaries\GameVersion.txt
+M:\SteamLibrary\steamapps\common\Paladins\Binaries\Win32\steam_appid.txt
+M:\SteamLibrary\steamapps\common\Paladins\Binaries\Win64\steam_appid.txt
+M:\SteamLibrary\steamapps\common\Paladins\ChaosGame\Localization\eula.txt
+M:\SteamLibrary\steamapps\common\Paladins\ChaosGame\Localization\PSN\eula.txt
+M:\SteamLibrary\steamapps\common\Paladins\ChaosGame\Localization\XboxLive\eula.txt
+M:\SteamLibrary\steamapps\common\Portal Reloaded\portalreloaded\cfg\video.txt
+M:\SteamLibrary\steamapps\common\Portal Reloaded\portalreloaded\stats.txt
+M:\SteamLibrary\steamapps\common\Portal Reloaded\portalreloaded\workshop_log.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\EULA.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\ar.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\de.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\en-US.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\es-MX.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\es.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\fr.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\id.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\it.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\ja.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\ko.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\pl.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\pt-BR.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\pt.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\ru.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\th.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\tr.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\uk.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\vi.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\zh-TW.txt
+M:\SteamLibrary\steamapps\common\PUBG\TslGame\Binaries\Win64\BattlEye\Privacy\zh.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\Binaries\EasyAntiCheat\Licenses\Apache-2.0.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\Binaries\EasyAntiCheat\Licenses\CCO-1.0.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\Binaries\EasyAntiCheat\Licenses\LGPL-2.1.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\Binaries\EasyAntiCheat\Licenses\Licenses.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\Binaries\EasyAntiCheat\Licenses\MIT.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\Binaries\Win64\steam_appid.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\CookedPCConsole\TextureVersion.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\CookedPCConsole\TextureVersionHighRes.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\CHN\Tencent\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\DEU\PSN_EU\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\ESL\PSN_EU\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\ESL\PSN_NA\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\ESN\PSN_EU\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\ESN\PSN_NA\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\FRA\PSN_EU\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\FRA\PSN_NA\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\INT\PSN_EU\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\INT\PSN_NA\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\POL\PSN_EU\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\POR\PSN_EU\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\POR\PSN_NA\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\PSN\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\PSN_EU\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\PSN_NA\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\RUS\PSN_EU\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\TUR\PSN_EU\eula.txt
+M:\SteamLibrary\steamapps\common\Realm Royale\RealmGame\Localization\XboxLive\eula.txt
+M:\SteamLibrary\steamapps\common\Satisfactory Modeler\quick_guide.txt
+M:\SteamLibrary\steamapps\common\Satisfactory Modeler\runtime\conf\security\policy\README.txt
+M:\SteamLibrary\steamapps\common\Slappyball\Manifest_DebugFiles_Win64.txt
+M:\SteamLibrary\steamapps\common\Slappyball\Manifest_NonUFSFiles_Win64.txt
+M:\SteamLibrary\steamapps\common\Splitgate\Manifest_DebugFiles_Win64.txt
+M:\SteamLibrary\steamapps\common\Splitgate\Manifest_NonUFSFiles_Win64.txt
+M:\SteamLibrary\steamapps\common\The Finals\Discovery\Content\Movies\test_if_submit_disallowed.txt
+M:\SteamLibrary\steamapps\common\The Finals\EasyAntiCheat\Licenses\Apache-2.0.txt
+M:\SteamLibrary\steamapps\common\The Finals\EasyAntiCheat\Licenses\Licenses.txt
+M:\SteamLibrary\steamapps\common\The Finals\EasyAntiCheat\Licenses\MIT.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Licenses.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\cs-CZ.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\cs.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\de-DE.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\de.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\en-US.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\en.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\es-ES.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\es-MX.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\es.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\fr-FR.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\fr.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\it-IT.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\it.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\ja-JP.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\ja.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\ko-KR.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\ko.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\nl-NL.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\nl.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\pl-PL.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\pl.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\pt-BR.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\pt.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\ru-RU.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\ru.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\tr-TR.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\tr.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\zh-CN.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\zh-TW.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\BattlEye\Privacy\zh.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\extendedpcidevs.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\logs\uplay_crash_reporter.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-br.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-cs.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-ct.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-cz.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-de.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-en.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-es.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-fr.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-it.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-jp.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-kr.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-mx.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-nl.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-pl.txt
+M:\SteamLibrary\steamapps\common\Tom Clancy's Rainbow Six Siege\Support\ReadMe\ReadMe-ru.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\Support\ReadMe\Brazilian\ReadMe.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\Support\ReadMe\Dutch\ReadMe.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\Support\ReadMe\English\Readme.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\Support\ReadMe\French\ReadMe.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\Support\ReadMe\German\ReadMe.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\Support\ReadMe\Italian\ReadMe.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\Support\ReadMe\Japanese\ReadMe.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\Support\ReadMe\LICENSES.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\Support\ReadMe\Russian\ReadMe.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\Support\ReadMe\SimplifiedChinese\ReadMe.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\Support\ReadMe\Spanish\ReadMe.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\Support\ReadMe\TraditionalChinese\ReadMe.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\PS4\Init.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\PS4\JD_Theme.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\PS4\Rabbids_Theme.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\PS4\Rayman_Theme.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\PS4\Teaser.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\PS4\UNO_ALL.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\Windows\English(US)\1111.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\Windows\Init.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\Windows\JD_Theme.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\Windows\Rabbids_Theme.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\Windows\Rayman_Theme.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\Windows\Teaser.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\Windows\UNO_ALL.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\XboxOne\Init.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\XboxOne\JD_Theme.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\XboxOne\Rabbids_Theme.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\XboxOne\Rayman_Theme.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\XboxOne\Teaser.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\Audio\UNO\GeneratedSoundBanks\XboxOne\UNO_ALL.txt
+M:\SteamLibrary\steamapps\common\UNO Demo\UNO_Data\StreamingAssets\desc.txt
+M:\SteamLibrary\steamapps\workshop\content\730\3076153623\publish_data.txt
+M:\SteamLibrary\steamapps\workshop\content\730\3219506727\publish_data.txt
+M:\SteamLibrary\steamapps\workshop\content\730\3320462469\publish_data.txt

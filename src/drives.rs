@@ -6,7 +6,7 @@ use windows::Win32::{Foundation::GetLastError, Storage::FileSystem::GetLogicalDr
 // Only the 26 chars of the alphabet are allowed
 const INVALID_DRIVE_LETTER_BITMASK: u32 = 0b11111100_00000000_00000000_00000000;
 
-pub(crate) fn get_available_drive_names() -> Result<HashSet<char>, LogicalDrivesError> {
+pub fn get_available_drive_names() -> Result<HashSet<char>, LogicalDrivesError> {
     let bit_mask = unsafe { GetLogicalDrives() };
 
     if bit_mask == 0 {
