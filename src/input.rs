@@ -3,7 +3,7 @@ use std::{
     path::{Path, PathBuf},
 };
 
-use crate::error::FinderError;
+use crate::error::Error;
 
 enum Args {
     None,
@@ -19,11 +19,11 @@ pub struct Input {
 }
 
 impl Input {
-    pub fn get_args() -> Result<Self, FinderError> {
+    pub fn get_args() -> Result<Self, Error> {
         let args = std::env::args().skip(1).collect::<VecDeque<_>>();
 
         if args.is_empty() {
-            Err(FinderError::IONoArgumentsProvided)?
+            Err(Error::IONoArgumentsProvided)?;
         }
 
         let mut input = Self {
@@ -36,27 +36,27 @@ impl Input {
         let mut flag_with_arg = Args::None;
 
         for mut arg in args {
-            if arg.starts_with("-") {
+            if arg.starts_with('-') {
                 arg.remove(0);
 
                 if arg == "-search" || arg == "s" {
-                    flag_with_arg = Args::Pattern
+                    flag_with_arg = Args::Pattern;
                 } else if arg == "-path" || arg == "p" {
-                    flag_with_arg = Args::Drive
+                    flag_with_arg = Args::Drive;
                 } else if arg == "-debug" {
                     input.debug = true;
                 } else if arg == "-no-stream" {
                     input.no_stream = true;
                 } else {
-                    Err(FinderError::IOInvalidArgumentSpecifier(arg))?
+                    Err(Error::IOInvalidArgumentSpecifier(arg))?;
                 }
             } else {
                 match flag_with_arg {
                     Args::None | Args::Pattern => {
                         if input.pattern.is_empty() {
-                            input.pattern = arg
+                            input.pattern = arg;
                         } else {
-                            Err(FinderError::IOInvalidArgument(arg))?
+                            Err(Error::IOInvalidArgument(arg))?;
                         }
                     }
                     Args::Drive => {

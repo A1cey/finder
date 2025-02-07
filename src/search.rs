@@ -4,44 +4,39 @@ use std::{
     sync::mpsc::{channel, Sender},
 };
 
-use crate::{
-    drives::get_available_drive_names,
-    error::{handle_error, FinderError},
-};
+use crate::{drives::get_available_drive_names, error::Error};
 
 pub struct SearchResult {
     pub found: Vec<PathBuf>,
-    pub errors: Option<Vec<FinderError>>,
+    pub errors: Option<Vec<Error>>,
 }
 
 impl SearchResult {
-    fn new(found: impl Into<Vec<PathBuf>>, errors: Option<impl Into<Vec<FinderError>>>) -> Self {
+    fn new(found: impl Into<Vec<PathBuf>>, errors: Option<impl Into<Vec<Error>>>) -> Self {
         SearchResult {
             found: found.into(),
-            errors: errors.map(|errors| errors.into()),
+            errors: errors.map(std::convert::Into::into),
         }
     }
 }
 
 pub async fn search(pattern: String, selected_drives: Option<HashSet<PathBuf>>, debug: bool) {
-    let drives = if selected_drives.is_some() {
-        selected_drives.unwrap()
-    } else {
-        let drives = get_available_drive_names();
-
-        if drives.is_err() {
-            handle_error(drives.unwrap_err());
-            return;
-        }
-
+    let drives = if let Some(drives) = selected_drives {
         drives
-            .unwrap()
-            .into_iter()
-            .map(|drive| Path::new(&format!("{drive}:\\")).into())
-            .collect()
+    } else {
+        match get_available_drive_names() {
+            Ok(drives) => drives
+                .into_iter()
+                .map(|drive| Path::new(&format!("{drive}:\\")).into())
+                .collect(),
+            Err(err) => {
+                Error::handle(&err);
+                return;
+            }
+        }
     };
-    
-    let (tx, rx) = channel::<Result<PathBuf, FinderError>>();
+
+    let (tx, rx) = channel::<Result<PathBuf, Error>>();
     let mut tasks = Vec::new();
 
     let streamer = tokio::spawn(async move {
@@ -50,7 +45,7 @@ pub async fn search(pattern: String, selected_drives: Option<HashSet<PathBuf>>, 
                 Ok(path) => println!("{}", path.display()),
                 Err(err) => {
                     if debug {
-                        handle_error(err);
+                        Error::handle(&err);
                     }
                 }
             }
@@ -68,12 +63,12 @@ pub async fn search(pattern: String, selected_drives: Option<HashSet<PathBuf>>, 
 
     for task in tasks {
         if let Err(err) = task.await {
-            handle_error(err.into());
+            Error::handle(&err.into());
         }
     }
 
     if let Err(err) = streamer.await {
-        handle_error(err.into());
+        Error::handle(&err.into());
     }
 }
 
@@ -81,7 +76,7 @@ pub async fn search_no_stream(
     pattern: String,
     selected_drives: Option<HashSet<PathBuf>>,
     debug: bool,
-) -> Result<SearchResult, FinderError> {
+) -> Result<SearchResult, Error> {
     println!("Searching ...");
 
     let drives = selected_drives.unwrap_or(
@@ -91,7 +86,7 @@ pub async fn search_no_stream(
             .collect(),
     );
 
-    let (tx, rx) = channel::<Result<PathBuf, FinderError>>();
+    let (tx, rx) = channel::<Result<PathBuf, Error>>();
     let mut tasks = Vec::new();
 
     let search_result = tokio::spawn(async move {
@@ -102,14 +97,14 @@ pub async fn search_no_stream(
             match res {
                 Ok(path) => found.push(path),
                 Err(err) => {
-                    if errors.is_some() {
-                        errors.as_mut().unwrap().push(err)
+                    if let Some(errors) = &mut errors {
+                        errors.push(err);
                     }
                 }
             }
         }
 
-        return SearchResult::new(found, errors);
+        SearchResult::new(found, errors)
     });
 
     for path in drives {
@@ -123,14 +118,14 @@ pub async fn search_no_stream(
 
     for task in tasks {
         if let Err(err) = task.await {
-            handle_error(err.into());
+            Error::handle(&err.into());
         }
     }
 
-    search_result.await.map_err(|err| err.into())
+    search_result.await.map_err(std::convert::Into::into)
 }
 
-async fn search_dir(path: PathBuf, pattern: String, tx: Sender<Result<PathBuf, FinderError>>) {
+async fn search_dir(path: PathBuf, pattern: String, tx: Sender<Result<PathBuf, Error>>) {
     if !path.is_dir() {
         return;
     }
@@ -147,7 +142,7 @@ async fn search_dir(path: PathBuf, pattern: String, tx: Sender<Result<PathBuf, F
                             let path = entry.path();
                             if path.to_str().map_or(false, |name| name.contains(&pattern)) {
                                 if let Err(err) = tx.send(Ok(path.clone())) {
-                                    handle_error(err.into());
+                                    Error::handle(&err.into());
                                     return;
                                 }
                             };
@@ -160,7 +155,7 @@ async fn search_dir(path: PathBuf, pattern: String, tx: Sender<Result<PathBuf, F
                                 }
                                 Err(err) => {
                                     if let Err(err) = tx.send(Err(err.into())) {
-                                        handle_error(err.into());
+                                        Error::handle(&err.into());
                                         return;
                                     }
                                 }
@@ -168,7 +163,7 @@ async fn search_dir(path: PathBuf, pattern: String, tx: Sender<Result<PathBuf, F
                         }
                         Err(err) => {
                             if let Err(err) = tx.send(Err(err.into())) {
-                                handle_error(err.into());
+                                Error::handle(&err.into());
                                 return;
                             }
                             break;
@@ -178,7 +173,7 @@ async fn search_dir(path: PathBuf, pattern: String, tx: Sender<Result<PathBuf, F
             }
             Err(err) => {
                 if let Err(err) = tx.send(Err(err.into())) {
-                    handle_error(err.into());
+                    Error::handle(&err.into());
                     return;
                 }
             }
