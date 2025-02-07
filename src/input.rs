@@ -1,48 +1,62 @@
 use std::{
     collections::{HashSet, VecDeque},
-    error::Error,
-    fmt::{Debug, Display},
-    path::Path,
+    path::{Path, PathBuf},
 };
+
+use crate::error::Error;
+
+enum Args {
+    None,
+    Pattern,
+    Drive,
+}
 
 pub struct Input {
     pub pattern: String,
-    pub selected_drives: Option<HashSet<Box<Path>>>,
+    pub selected_drives: Option<HashSet<PathBuf>>,
+    pub debug: bool,
+    pub no_stream: bool,
 }
 
 impl Input {
-    pub fn get_args() -> Result<Self, Box<dyn Error>> {
+    pub fn get_args() -> Result<Self, Error> {
         let args = std::env::args().skip(1).collect::<VecDeque<_>>();
 
         if args.is_empty() {
-            Err(IOError::NoArgumentsProvided)?
+            Err(Error::IONoArgumentsProvided)?;
         }
 
         let mut input = Self {
             pattern: String::new(),
             selected_drives: None,
+            debug: false,
+            no_stream: false,
         };
 
-        let mut flag = Args::None;
+        let mut flag_with_arg = Args::None;
 
         for mut arg in args {
-            if arg.starts_with("-") {
+            if arg.starts_with('-') {
                 arg.remove(0);
 
                 if arg == "-search" || arg == "s" {
-                    flag = Args::Pattern
+                    flag_with_arg = Args::Pattern;
                 } else if arg == "-path" || arg == "p" {
-                    flag = Args::Drive
+                    flag_with_arg = Args::Drive;
+                } else if arg == "-debug" {
+                    input.debug = true;
+                } else if arg == "-no-stream" {
+                    input.no_stream = true;
                 } else {
-                    Err(IOError::InvalidArgumentSpecifier(arg))?
+                    Err(Error::IOInvalidArgumentSpecifier(arg))?;
                 }
             } else {
-                match flag {
+                match flag_with_arg {
                     Args::None | Args::Pattern => {
                         if input.pattern.is_empty() {
-                            input.pattern = arg
+                            input.pattern = arg;
                         } else {
-                            Err(IOError::InvalidArgument(arg))?
+                            Err(Error::IOInvalidArgument(arg))?;
                         }
                     }
                     Args::Drive => {
@@ -56,39 +70,5 @@ impl Input {
         }
 
         Ok(input)
-    }
-}
-
-enum Args {
-    None,
-    Pattern,
-    Drive,
-}
-
-enum IOError {
-    NoArgumentsProvided,
-    InvalidArgumentSpecifier(String),
-    InvalidArgument(String),
-}
-
-impl Error for IOError {}
-
-impl Display for IOError {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "{self:?}")
-    }
-}
-
-impl Debug for IOError {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match self {
-            IOError::NoArgumentsProvided => write!(f, "No Arguments Provided"),
-            IOError::InvalidArgumentSpecifier(arg) => {
-                write!(f, "Invalid Argument Specifier: {arg}")
-            }
-            IOError::InvalidArgument(arg) => {
-                write!(f, "Invalid Argument: {arg}")
-            }
-        }
     }
 }
