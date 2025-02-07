@@ -5,10 +5,17 @@ use std::{
 
 use crate::error::FinderError;
 
+enum Args {
+    None,
+    Pattern,
+    Drive,
+}
+
 pub struct Input {
     pub pattern: String,
     pub selected_drives: Option<HashSet<PathBuf>>,
-    pub debug: bool
+    pub debug: bool,
+    pub no_stream: bool,
 }
 
 impl Input {
@@ -22,26 +29,29 @@ impl Input {
         let mut input = Self {
             pattern: String::new(),
             selected_drives: None,
-            debug: false
+            debug: false,
+            no_stream: false,
         };
 
-        let mut flag = Args::None;
+        let mut flag_with_arg = Args::None;
 
         for mut arg in args {
             if arg.starts_with("-") {
                 arg.remove(0);
 
                 if arg == "-search" || arg == "s" {
-                    flag = Args::Pattern
+                    flag_with_arg = Args::Pattern
                 } else if arg == "-path" || arg == "p" {
-                    flag = Args::Drive
+                    flag_with_arg = Args::Drive
                 } else if arg == "-debug" {
-                    flag = Args::Debug
+                    input.debug = true;
+                } else if arg == "-no-stream" {
+                    input.no_stream = true;
                 } else {
                     Err(FinderError::IOInvalidArgumentSpecifier(arg))?
                 }
             } else {
-                match flag {
+                match flag_with_arg {
                     Args::None | Args::Pattern => {
                         if input.pattern.is_empty() {
                             input.pattern = arg
@@ -54,9 +64,6 @@ impl Input {
                             .selected_drives
                             .get_or_insert_default()
                             .insert(Path::new(&arg).into());
-                    },
-                    Args::Debug => {
-                        input.debug = true;
                     }
                 }
             }
@@ -64,11 +71,4 @@ impl Input {
 
         Ok(input)
     }
-}
-
-enum Args {
-    None,
-    Pattern,
-    Drive,
-    Debug
 }

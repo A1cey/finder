@@ -25,4 +25,3 @@ pub fn get_available_drive_names() -> Result<HashSet<char>, FinderError> {
             .collect())
     }
 }
-

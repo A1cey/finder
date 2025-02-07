@@ -1,6 +1,7 @@
 use std::{
     error::Error,
-    fmt::{Debug, Display}, path::PathBuf,
+    fmt::{Debug, Display},
+    path::PathBuf,
 };
 
 pub enum FinderError {
@@ -15,7 +16,7 @@ pub enum FinderError {
     IONotFound,
     IOOther(String),
     IOPermissionDenied,
-    TokioJoin(String)
+    TokioJoin(String),
 }
 
 impl Error for FinderError {}
@@ -44,7 +45,7 @@ impl Debug for FinderError {
             FinderError::IONotFound => write!(f, "IO Error: Not found."),
             FinderError::IOOther(err) => write!(f, "IO Error: {err}"),
             FinderError::IOPermissionDenied => write!(f, "Permission denied."),
-            FinderError::TokioJoin(err) => write!(f,"Tokio Error: Join Error: {err}")
+            FinderError::TokioJoin(err) => write!(f, "Tokio Error: Join Error: {err}"),
         }
     }
 }
