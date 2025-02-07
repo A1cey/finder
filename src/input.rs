@@ -1,26 +1,28 @@
 use std::{
     collections::{HashSet, VecDeque},
-    error::Error,
-    fmt::{Debug, Display},
-    path::Path,
+    path::{Path, PathBuf},
 };
+
+use crate::error::FinderError;
 
 pub struct Input {
     pub pattern: String,
-    pub selected_drives: Option<HashSet<Box<Path>>>,
+    pub selected_drives: Option<HashSet<PathBuf>>,
+    pub debug: bool
 }
 
 impl Input {
-    pub fn get_args() -> Result<Self, Box<dyn Error>> {
+    pub fn get_args() -> Result<Self, FinderError> {
         let args = std::env::args().skip(1).collect::<VecDeque<_>>();
 
         if args.is_empty() {
-            Err(IOError::NoArgumentsProvided)?
+            Err(FinderError::IONoArgumentsProvided)?
         }
 
         let mut input = Self {
             pattern: String::new(),
             selected_drives: None,
+            debug: false
         };
 
         let mut flag = Args::None;
@@ -33,8 +35,10 @@ impl Input {
                     flag = Args::Pattern
                 } else if arg == "-path" || arg == "p" {
                     flag = Args::Drive
+                } else if arg == "-debug" {
+                    flag = Args::Debug
                 } else {
-                    Err(IOError::InvalidArgumentSpecifier(arg))?
+                    Err(FinderError::IOInvalidArgumentSpecifier(arg))?
                 }
             } else {
                 match flag {
@@ -42,7 +46,7 @@ impl Input {
                         if input.pattern.is_empty() {
                             input.pattern = arg
                         } else {
-                            Err(IOError::InvalidArgument(arg))?
+                            Err(FinderError::IOInvalidArgument(arg))?
                         }
                     }
                     Args::Drive => {
@@ -50,6 +54,9 @@ impl Input {
                             .selected_drives
                             .get_or_insert_default()
                             .insert(Path::new(&arg).into());
+                    },
+                    Args::Debug => {
+                        input.debug = true;
                     }
                 }
             }
@@ -63,32 +70,5 @@ enum Args {
     None,
     Pattern,
     Drive,
-}
-
-enum IOError {
-    NoArgumentsProvided,
-    InvalidArgumentSpecifier(String),
-    InvalidArgument(String),
-}
-
-impl Error for IOError {}
-
-impl Display for IOError {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "{self:?}")
-    }
-}
-
-impl Debug for IOError {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match self {
-            IOError::NoArgumentsProvided => write!(f, "No Arguments Provided"),
-            IOError::InvalidArgumentSpecifier(arg) => {
-                write!(f, "Invalid Argument Specifier: {arg}")
-            }
-            IOError::InvalidArgument(arg) => {
-                write!(f, "Invalid Argument: {arg}")
-            }
-        }
-    }
+    Debug
 }
