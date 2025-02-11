@@ -1,74 +1,103 @@
-use std::{
-    collections::{HashSet, VecDeque},
-    path::{Path, PathBuf},
-};
+use std::{collections::HashSet, path::PathBuf};
 
-use crate::error::Error;
+use super::error::Error;
+use clap::{value_parser, Arg, ArgAction, Command};
 
-enum Args {
-    None,
-    Pattern,
-    Drive,
-}
-
-pub struct Input {
+pub struct Args {
     pub pattern: String,
     pub selected_drives: Option<HashSet<PathBuf>>,
     pub debug: bool,
     pub no_stream: bool,
 }
 
-impl Input {
-    pub fn get_args() -> Result<Self, Error> {
-        let args = std::env::args().skip(1).collect::<VecDeque<_>>();
-
-        if args.is_empty() {
-            Err(Error::IONoArgumentsProvided)?;
+impl Args {
+    fn new(
+        pattern: String,
+        selected_drives: Option<HashSet<PathBuf>>,
+        debug: bool,
+        no_stream: bool,
+    ) -> Args {
+        Args {
+            pattern,
+            selected_drives,
+            debug,
+            no_stream,
         }
-
-        let mut input = Self {
-            pattern: String::new(),
-            selected_drives: None,
-            debug: false,
-            no_stream: false,
-        };
-
-        let mut flag_with_arg = Args::None;
-
-        for mut arg in args {
-            if arg.starts_with('-') {
-                arg.remove(0);
-
-                if arg == "-search" || arg == "s" {
-                    flag_with_arg = Args::Pattern;
-                } else if arg == "-path" || arg == "p" {
-                    flag_with_arg = Args::Drive;
-                } else if arg == "-debug" {
-                    input.debug = true;
-                } else if arg == "-no-stream" {
-                    input.no_stream = true;
-                } else {
-                    Err(Error::IOInvalidArgumentSpecifier(arg))?;
-                }
-            } else {
-                match flag_with_arg {
-                    Args::None | Args::Pattern => {
-                        if input.pattern.is_empty() {
-                            input.pattern = arg;
-                        } else {
-                            Err(Error::IOInvalidArgument(arg))?;
-                        }
-                    }
-                    Args::Drive => {
-                        input
-                            .selected_drives
-                            .get_or_insert_default()
-                            .insert(Path::new(&arg).into());
-                    }
-                }
-            }
-        }
-
-        Ok(input)
     }
+}
+
+pub fn args() -> Result<Args, Error> {
+    let mut args = Command::new("finder_args")
+        .version("0.2.0")
+        .arg(
+            Arg::new("pattern")
+                .value_name("PATTERN")
+                .conflicts_with("pattern_arg")
+                .required(true)
+                .help("The pattern to search for. Provide either this positional argument OR the --search flag, but not both.")
+                .num_args(1),
+        )
+        .arg(
+            Arg::new("pattern_arg")
+                .value_name("PATTERN")
+                .short('s')
+                .long("search")
+                .help("The pattern to search for (alternative). Provide either this --search flag OR the positional argument, but not both.")
+                .num_args(1),
+        )
+        .arg(
+            Arg::new("path")
+                .value_name("PATH")
+                .short('p')
+                .long("path")
+                .help("The root path(s) for the search separated by spaces.")
+                .num_args(0..)
+                .value_parser(value_parser!(PathBuf)),
+        )
+        .arg(
+            Arg::new("debug")
+                .long("debug")
+                .action(ArgAction::SetTrue)
+                .help("Print all errors to the console."),
+        )
+        .arg(
+            Arg::new("no_stream")
+                .long("no-stream")
+                .action(ArgAction::SetTrue)
+                .help("The result of the search will be only returned at the end as one block.\n\
+                    This can have the effect, that all existing results were found\n\
+                    but they are not displayed because some paths are still searched.",
+                ),
+        )
+        .disable_help_flag(true)
+        .arg(Arg::new("help")
+            .short('h')
+            .long("help")
+            .help("Print help info.")
+            .action(ArgAction::Help)
+        )
+        .disable_version_flag(true)
+        .arg(Arg::new("version")
+            .short('v')
+            .long("version")
+            .help("Print the version.")
+            .action(ArgAction::Version)
+        )
+        .get_matches();
+   
+    let pattern = match args.try_remove_one::<String>("pattern")? {
+        Some(pat) => pat,
+        None => args
+            .try_remove_one::<String>("pattern_arg")?
+            .expect("pattern or pattern_arg must be present"),
+    };
+
+    let selected_drives = args
+        .try_remove_many::<PathBuf>("path")?
+        .map(|paths| paths.collect::<HashSet<_>>());
+
+    let debug = args.get_flag("debug");
+    let no_stream = args.get_flag("no_stream");
+
+    Ok(Args::new(pattern, selected_drives, debug, no_stream))
 }

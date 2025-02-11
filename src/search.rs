@@ -134,7 +134,7 @@ async fn search_dir(path: PathBuf, pattern: String, tx: Sender<Result<PathBuf, E
     to_search.push_back(path);
 
     while let Some(path) = to_search.pop_front() {
-        match tokio::fs::read_dir(path).await {
+        match tokio::fs::read_dir(&path).await {
             Ok(mut dir) => {
                 while let Some(entry) = dir.next_entry().await.transpose() {
                     match entry {
@@ -154,7 +154,7 @@ async fn search_dir(path: PathBuf, pattern: String, tx: Sender<Result<PathBuf, E
                                     }
                                 }
                                 Err(err) => {
-                                    if let Err(err) = tx.send(Err(err.into())) {
+                                    if let Err(err) = tx.send(Err(Error::IOError(err, path)))  {
                                         Error::handle(&err.into());
                                         return;
                                     }
@@ -162,7 +162,7 @@ async fn search_dir(path: PathBuf, pattern: String, tx: Sender<Result<PathBuf, E
                             }
                         }
                         Err(err) => {
-                            if let Err(err) = tx.send(Err(err.into())) {
+                            if let Err(err) = tx.send(Err(Error::IOError(err, path))) {
                                 Error::handle(&err.into());
                                 return;
                             }
@@ -172,7 +172,7 @@ async fn search_dir(path: PathBuf, pattern: String, tx: Sender<Result<PathBuf, E
                 }
             }
             Err(err) => {
-                if let Err(err) = tx.send(Err(err.into())) {
+                if let Err(err) = tx.send(Err(Error::IOError(err, path)))  {
                     Error::handle(&err.into());
                     return;
                 }

@@ -1,11 +1,12 @@
 [package]
 name = "finder"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2021"
 
 [dependencies]
 tokio = { version = "1", features = ["full"] }
 bitvec = "1.0.1"
+clap = { version = "4.5.28", features = ["derive"] }
 
 [dependencies.windows]
 version = "0.59.0"
