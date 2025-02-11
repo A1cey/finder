@@ -2,6 +2,8 @@
 name = "finder"
 version = "0.3.0"
 edition = "2021"
+authors = ["Maximilian Schelkle"]
+description = "finder lets you find your files and directories (currently only on Windows). finder was created as a grep clone. It is a hobby project."
 
 [dependencies]
 tokio = { version = "1", features = ["full"] }

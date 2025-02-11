@@ -28,7 +28,10 @@ impl Args {
 
 pub fn args() -> Result<Args, Error> {
     let mut args = Command::new("finder_args")
-        .version("0.2.0")
+        .version(env!("CARGO_PKG_VERSION"))
+        .name(env!("CARGO_PKG_NAME"))
+        .author(env!("CARGO_PKG_AUTHORS"))
+        .about(env!("CARGO_PKG_DESCRIPTION"))
         .arg(
             Arg::new("pattern")
                 .value_name("PATTERN")
