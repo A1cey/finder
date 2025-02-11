@@ -10,7 +10,7 @@ pub enum Error {
     ChannelRecv(String),
     DrivesApi(u32),
     DrivesInvalidNumberOfDrives,
-    IOError(io::Error, PathBuf),
+    IO(io::Error, PathBuf),
     TokioJoin(String),
 }
 
@@ -35,7 +35,7 @@ impl Debug for Error {
             Error::ChannelRecv(err) => write!(f, "Channel Receiver Error: {err}"),
             Error::DrivesApi(code) => write!(f, "Api Error: {code}"),
             Error::DrivesInvalidNumberOfDrives => write!(f, "Invalid Number of Drives."),
-            Error::IOError(err,path ) => write!(f,"{}: {}",path.display(), err),
+            Error::IO(err, path) => write!(f, "{}: {}", path.display(), err),
             Error::TokioJoin(err) => write!(f, "Tokio Error: Join Error: {err}"),
         }
     }

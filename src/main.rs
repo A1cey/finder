@@ -1,4 +1,4 @@
-#![deny(clippy::unwrap_used, clippy::expect_used)]
+#![deny(clippy::unwrap_used)]
 
 use error::Error;
 use input::args;

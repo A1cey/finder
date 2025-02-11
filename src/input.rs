@@ -84,7 +84,7 @@ pub fn args() -> Result<Args, Error> {
             .action(ArgAction::Version)
         )
         .get_matches();
-   
+
     let pattern = match args.try_remove_one::<String>("pattern")? {
         Some(pat) => pat,
         None => args
@@ -94,7 +94,7 @@ pub fn args() -> Result<Args, Error> {
 
     let selected_drives = args
         .try_remove_many::<PathBuf>("path")?
-        .map(|paths| paths.collect::<HashSet<_>>());
+        .map(std::iter::Iterator::collect);
 
     let debug = args.get_flag("debug");
     let no_stream = args.get_flag("no_stream");
