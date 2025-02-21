@@ -155,7 +155,7 @@ async fn search_dir(path: PathBuf, pattern: String, tx: Sender<Result<PathBuf, E
                                     }
                                 }
                                 Err(err) => {
-                                    if let Err(err) = tx.send(Err(Error::IO(err, path))) {
+                                    if let Err(err) = tx.send(Err(Error::SearchIO(err, path))) {
                                         Error::handle(&err.into());
                                         return;
                                     }
@@ -163,7 +163,7 @@ async fn search_dir(path: PathBuf, pattern: String, tx: Sender<Result<PathBuf, E
                             }
                         }
                         Err(err) => {
-                            if let Err(err) = tx.send(Err(Error::IO(err, path))) {
+                            if let Err(err) = tx.send(Err(Error::SearchIO(err, path))) {
                                 Error::handle(&err.into());
                                 return;
                             }
@@ -173,7 +173,7 @@ async fn search_dir(path: PathBuf, pattern: String, tx: Sender<Result<PathBuf, E
                 }
             }
             Err(err) => {
-                if let Err(err) = tx.send(Err(Error::IO(err, path))) {
+                if let Err(err) = tx.send(Err(Error::SearchIO(err, path))) {
                     Error::handle(&err.into());
                     return;
                 }

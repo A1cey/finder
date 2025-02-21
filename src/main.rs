@@ -10,7 +10,7 @@ mod input;
 mod search;
 
 #[tokio::main]
-async fn main() {
+async fn main() {   
     match args() {
         Ok(args) => {
             if args.no_stream {

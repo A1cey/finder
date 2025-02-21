@@ -1,4 +1,4 @@
-use std::{collections::HashSet, path::PathBuf};
+use std::{collections::HashSet, path::PathBuf, env};
 
 use super::error::Error;
 use clap::{value_parser, Arg, ArgAction, Command};
@@ -58,6 +58,13 @@ pub fn args() -> Result<Args, Error> {
                 .value_parser(value_parser!(PathBuf)),
         )
         .arg(
+            Arg::new("current_directory")
+                .short('c')
+                .long("current")
+                .action(ArgAction::SetTrue)
+                .help("The current directory is used as the root path for the search.")
+        )
+        .arg(
             Arg::new("debug")
                 .long("debug")
                 .action(ArgAction::SetTrue)
@@ -95,10 +102,14 @@ pub fn args() -> Result<Args, Error> {
             .expect("pattern or pattern_arg must be present"),
     };
 
-    let selected_drives = args
+    let mut selected_drives: Option<HashSet<PathBuf>> = args
         .try_remove_many::<PathBuf>("path")?
         .map(std::iter::Iterator::collect);
 
+    if args.get_flag("current_directory") {
+        selected_drives.get_or_insert_with(|| HashSet::new()).insert(env::current_dir()?);
+    }
+    
     let debug = args.get_flag("debug");
     let no_stream = args.get_flag("no_stream");
 

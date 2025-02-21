@@ -10,7 +10,8 @@ pub enum Error {
     ChannelRecv(String),
     DrivesApi(u32),
     DrivesInvalidNumberOfDrives,
-    IO(io::Error, PathBuf),
+    IO(io::Error),
+    SearchIO(io::Error, PathBuf),
     TokioJoin(String),
 }
 
@@ -35,7 +36,8 @@ impl Debug for Error {
             Error::ChannelRecv(err) => write!(f, "Channel Receiver Error: {err}"),
             Error::DrivesApi(code) => write!(f, "Api Error: {code}"),
             Error::DrivesInvalidNumberOfDrives => write!(f, "Invalid Number of Drives."),
-            Error::IO(err, path) => write!(f, "{}: {}", path.display(), err),
+            Error::IO(err) => write!(f, "{}",err),
+            Error::SearchIO(err, path) => write!(f, "{}: {}", path.display(), err),
             Error::TokioJoin(err) => write!(f, "Tokio Error: Join Error: {err}"),
         }
     }
@@ -62,5 +64,11 @@ impl From<std::sync::mpsc::SendError<Result<PathBuf, Error>>> for Error {
 impl From<clap::parser::MatchesError> for Error {
     fn from(value: clap::parser::MatchesError) -> Self {
         Self::Args(value.to_string())
+    }
+}
+
+impl From<std::io::Error> for Error {
+    fn from(value: std::io::Error) -> Self {
+        Self::IO(value)
     }
 }
