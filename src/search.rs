@@ -79,12 +79,13 @@ pub async fn search_no_stream(
 ) -> Result<SearchResult, Error> {
     println!("Searching ...");
 
-    let drives = selected_drives.unwrap_or(
-        get_available_drive_names()?
+    let drives = match selected_drives {
+        Some(drives) => drives,
+        None => get_available_drive_names()?
             .into_iter()
             .map(|drive| Path::new(&format!("{drive}:\\")).into())
             .collect(),
-    );
+    };
 
     let (tx, rx) = channel::<Result<PathBuf, Error>>();
     let mut tasks = Vec::new();
