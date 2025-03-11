@@ -2,40 +2,25 @@
 
 use error::Error;
 use input::args;
-use search::SearchResult;
+use output::print_results;
 
 mod drives;
 mod error;
 mod input;
+mod output;
 mod search;
 
 #[tokio::main]
-async fn main() {   
+async fn main() {
     match args() {
-        Ok(args) => {
-            if args.no_stream {
-                match search::search_no_stream(args.pattern, args.selected_drives, args.debug).await
-                {
-                    Ok(result) => handle_result(result),
-                    Err(err) => Error::handle(&err),
+        Ok(args) => match search::search(&args).await {
+            Ok(res) => {
+                if let Some(res) = res {
+                    print_results(&args.pattern, res)
                 }
-            } else {
-                search::search(args.pattern, args.selected_drives, args.debug).await;
-            };
-        }
+            }
+            Err(err) => Error::handle(&err),
+        },
         Err(err) => Error::handle(&err),
-    }
-}
-
-fn handle_result(result: SearchResult) {
-    println!("Results:");
-    result
-        .found
-        .into_iter()
-        .for_each(|path| println!("{}", path.display()));
-
-    if let Some(errors) = result.errors {
-        println!("Errors:");
-        errors.into_iter().for_each(|err| Error::handle(&err));
     }
 }

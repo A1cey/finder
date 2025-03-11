@@ -1,11 +1,17 @@
-use std::{collections::HashSet, path::PathBuf, env};
+use std::{
+    collections::HashSet,
+    env,
+    path::{Path, PathBuf},
+};
+
+use crate::drives::get_available_drive_names;
 
 use super::error::Error;
-use clap::{value_parser, Arg, ArgAction, Command};
+use clap::{Arg, ArgAction, Command, value_parser};
 
 pub struct Args {
     pub pattern: String,
-    pub selected_drives: Option<HashSet<PathBuf>>,
+    pub selected_drives: HashSet<PathBuf>,
     pub debug: bool,
     pub no_stream: bool,
 }
@@ -13,7 +19,7 @@ pub struct Args {
 impl Args {
     fn new(
         pattern: String,
-        selected_drives: Option<HashSet<PathBuf>>,
+        selected_drives: HashSet<PathBuf>,
         debug: bool,
         no_stream: bool,
     ) -> Args {
@@ -102,14 +108,23 @@ pub fn args() -> Result<Args, Error> {
             .expect("pattern or pattern_arg must be present"),
     };
 
-    let mut selected_drives: Option<HashSet<PathBuf>> = args
+    let mut selected_drives: HashSet<PathBuf> = args
         .try_remove_many::<PathBuf>("path")?
-        .map(std::iter::Iterator::collect);
+        .map_or_else(HashSet::new, std::iter::Iterator::collect);
 
     if args.get_flag("current_directory") {
-        selected_drives.get_or_insert_with(|| HashSet::new()).insert(env::current_dir()?);
+        selected_drives.insert(env::current_dir()?);
     }
-    
+
+    if selected_drives.is_empty() {
+        get_available_drive_names()?
+            .into_iter()
+            .map(|drive| Path::new(&format!("{drive}:\\")).into())
+            .for_each(|path| {
+                selected_drives.insert(path);
+            })
+    }
+
     let debug = args.get_flag("debug");
     let no_stream = args.get_flag("no_stream");
 
