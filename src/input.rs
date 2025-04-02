@@ -14,6 +14,7 @@ pub struct Args {
     pub selected_drives: HashSet<PathBuf>,
     pub debug: bool,
     pub no_stream: bool,
+    pub match_path: fn(&Path, &str) -> bool,
 }
 
 impl Args {
@@ -22,12 +23,14 @@ impl Args {
         selected_drives: HashSet<PathBuf>,
         debug: bool,
         no_stream: bool,
+        match_path: fn(&Path, &str) -> bool
     ) -> Args {
         Args {
             pattern,
             selected_drives,
             debug,
             no_stream,
+            match_path
         }
     }
 }
@@ -69,6 +72,18 @@ pub fn args() -> Result<Args, Error> {
                 .long("current")
                 .action(ArgAction::SetTrue)
                 .help("The current directory is used as the root path for the search.")
+        )
+        .arg(
+            Arg::new("dir")
+                    .short('D')
+                    .action(ArgAction::SetTrue)
+                    .help("Only searches for directories.")
+        )
+        .arg(
+            Arg::new("file")
+                    .short('F')
+                    .action(ArgAction::SetTrue)
+                    .help("Only searches for files.")
         )
         .arg(
             Arg::new("debug")
@@ -127,6 +142,35 @@ pub fn args() -> Result<Args, Error> {
 
     let debug = args.get_flag("debug");
     let no_stream = args.get_flag("no_stream");
+    
+    let only_dir = args.get_flag("dir");
+    let only_file = args.get_flag("file");
+    
+    let match_path = create_match_path(only_dir, only_file);
 
-    Ok(Args::new(pattern, selected_drives, debug, no_stream))
+    Ok(Args::new(pattern, selected_drives, debug, no_stream, match_path))
+}
+
+fn create_match_path(only_dir: bool, only_file: bool) -> fn(&Path, &str) -> bool {
+    if only_dir == only_file {
+        |path: &Path, pattern: &str| {
+            path.to_str().map_or(false, |name| name.contains(pattern))
+        }
+    } else if only_file {
+        |path: &Path, pattern: &str| {
+            path.is_file()
+                && path
+                    .file_name()
+                    .and_then(|name| name.to_str())
+                    .map_or(false, |name| name.contains(pattern))
+        }
+    } else {
+        |path: &Path, pattern: &str| {
+            path.is_dir()
+                && path
+                    .file_name()
+                    .and_then(|name| name.to_str())
+                    .map_or(false, |name| name.contains(pattern))
+        }
+    }
 }

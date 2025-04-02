@@ -1,3 +1,4 @@
+use std::path::Path;
 use std::thread::sleep;
 use std::time::Duration;
 use std::{path::PathBuf, sync::Arc};
@@ -27,6 +28,7 @@ pub async fn search(args: &Args) -> Result<Option<SearchResult>, Error> {
     let (process_tx, process_rx) = mpsc::channel::<JoinHandle<()>>(100);
 
     let pattern = Arc::new(args.pattern.clone());
+    let match_path = Arc::new(args.match_path);
 
     let result = if args.no_stream {
         no_stream_processor(args.debug, res_rx)
@@ -46,6 +48,7 @@ pub async fn search(args: &Args) -> Result<Option<SearchResult>, Error> {
             Arc::new(path),
             res_tx.clone(),
             process_tx.clone(),
+            match_path.clone()
         );
     }
 
@@ -104,6 +107,7 @@ async fn process_dir(
     path: Arc<PathBuf>,
     res_tx: Sender<Result<Arc<PathBuf>, Error>>,
     process_tx: Sender<JoinHandle<()>>,
+    match_path: Arc<fn(&Path, &str) -> bool>
 ) {
     if !path.is_dir() {
         return;
@@ -118,6 +122,7 @@ async fn process_dir(
                     path.clone(),
                     res_tx.clone(),
                     process_tx.clone(),
+                    match_path.clone()
                 )
                 .await;
             }
@@ -134,13 +139,12 @@ async fn process_entry(
     path: Arc<PathBuf>,
     res_tx: Sender<Result<Arc<PathBuf>, Error>>,
     process_tx: Sender<JoinHandle<()>>,
+    match_path: Arc<fn(&Path, &str) -> bool>
 ) {
     match entry {
         Ok(entry) => {
             let path = Arc::new(entry.path());
-            if path
-                .to_str()
-                .map_or(false, |name| name.contains(pattern.as_str()))
+            if match_path(&path, pattern.as_str()) 
                 && res_tx.send(Ok(path.clone())).await.is_err()
             {
                 return;
@@ -151,6 +155,7 @@ async fn process_entry(
                 path.clone(),
                 res_tx.clone(),
                 process_tx.clone(),
+                match_path.clone()
             );
         }
         Err(err) => {
@@ -170,11 +175,13 @@ fn next_dir(
     path: Arc<PathBuf>,
     res_tx: Sender<Result<Arc<PathBuf>, Error>>,
     process_tx: Sender<JoinHandle<()>>,
+    match_path: Arc<fn(&Path, &str) -> bool>
 ) {
     let _ = process_tx.send(tokio::spawn(process_dir(
         pattern,
         path,
         res_tx,
         process_tx.clone(),
+        match_path
     )));
 }
