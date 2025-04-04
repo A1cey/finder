@@ -2,6 +2,7 @@ use std::{
     collections::HashSet,
     env,
     path::{Path, PathBuf},
+    sync::Arc,
 };
 
 use crate::drives::get_available_drive_names;
@@ -9,28 +10,45 @@ use crate::drives::get_available_drive_names;
 use super::error::Error;
 use clap::{Arg, ArgAction, Command, value_parser};
 
+#[derive(PartialEq, Eq, Clone,Copy)]
+pub enum Debug {
+    On,
+    Off,
+}
+
+pub enum OutputType {
+    Stream,
+    NoStream,
+}
+
+pub enum SearchType {
+    Dir,
+    File,
+    Both,
+}
+
 pub struct Args {
-    pub pattern: String,
+    pub pattern: Arc<String>,
     pub selected_drives: HashSet<PathBuf>,
-    pub debug: bool,
-    pub no_stream: bool,
-    pub match_path: fn(&Path, &str) -> bool,
+    pub debug: Debug,
+    pub output_type: OutputType,
+    pub search_type: SearchType,
 }
 
 impl Args {
     fn new(
-        pattern: String,
+        pattern: Arc<String>,
         selected_drives: HashSet<PathBuf>,
-        debug: bool,
-        no_stream: bool,
-        match_path: fn(&Path, &str) -> bool
+        debug: Debug,
+        output_type: OutputType,
+        search_type: SearchType,
     ) -> Args {
         Args {
             pattern,
             selected_drives,
             debug,
-            no_stream,
-            match_path
+            output_type,
+            search_type,
         }
     }
 }
@@ -140,37 +158,32 @@ pub fn args() -> Result<Args, Error> {
             })
     }
 
-    let debug = args.get_flag("debug");
-    let no_stream = args.get_flag("no_stream");
-    
+    let debug = match args.get_flag("debug") {
+        true => Debug::On,
+        false => Debug::Off,
+    };
+
+    let output_type = match args.get_flag("no_stream") {
+        true => OutputType::NoStream,
+        false => OutputType::Stream,
+    };
+
     let only_dir = args.get_flag("dir");
     let only_file = args.get_flag("file");
-    
-    let match_path = create_match_path(only_dir, only_file);
 
-    Ok(Args::new(pattern, selected_drives, debug, no_stream, match_path))
-}
-
-fn create_match_path(only_dir: bool, only_file: bool) -> fn(&Path, &str) -> bool {
-    if only_dir == only_file {
-        |path: &Path, pattern: &str| {
-            path.to_str().map_or(false, |name| name.contains(pattern))
-        }
-    } else if only_file {
-        |path: &Path, pattern: &str| {
-            path.is_file()
-                && path
-                    .file_name()
-                    .and_then(|name| name.to_str())
-                    .map_or(false, |name| name.contains(pattern))
-        }
+    let search_type = if only_dir == only_file {
+        SearchType::Both
+    } else if only_dir {
+        SearchType::Dir
     } else {
-        |path: &Path, pattern: &str| {
-            path.is_dir()
-                && path
-                    .file_name()
-                    .and_then(|name| name.to_str())
-                    .map_or(false, |name| name.contains(pattern))
-        }
-    }
+        SearchType::File
+    };
+
+    Ok(Args::new(
+        Arc::new(pattern),
+        selected_drives,
+        debug,
+        output_type,
+        search_type,
+    ))
 }
