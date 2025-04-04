@@ -12,6 +12,13 @@ mod search;
 
 #[tokio::main]
 async fn main() {
+    tokio::select! {
+        _ = run() => {},
+        _ = tokio::signal::ctrl_c() => {}
+    }
+}
+
+async fn run() {
     match args() {
         Ok(args) => match search::search(&args).await {
             Ok(res) => {
