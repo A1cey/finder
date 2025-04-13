@@ -3,6 +3,7 @@
 use error::Error;
 use input::args;
 use output::print_results;
+use tokio_util::sync::CancellationToken;
 
 mod drives;
 mod error;
@@ -12,15 +13,19 @@ mod search;
 
 #[tokio::main]
 async fn main() {
+    let token = CancellationToken::new();
+
     tokio::select! {
-        _ = run() => {},
-        _ = tokio::signal::ctrl_c() => {}
+        () = run(token.clone()) => {},
+        _ = tokio::signal::ctrl_c() => {
+            token.cancel();
+        }
     }
 }
 
-async fn run() {
+async fn run(cancel_token: CancellationToken) {
     match args() {
-        Ok(args) => match search::search(&args).await {
+        Ok(args) => match search::search(&args, cancel_token).await {
             Ok(res) => {
                 if let Some(res) = res {
                     print_results(&args.pattern, res);

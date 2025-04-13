@@ -9,6 +9,7 @@ description = "finder lets you find your files and directories (currently only o
 tokio = { version = "1", features = ["full"] }
 bitvec = "1.0.1"
 clap = { version = "4.5.28", features = ["derive"] }
+tokio-util = "0.7.14"
 
 [dependencies.windows]
 version = "0.59.0"
