@@ -23,7 +23,7 @@ async fn run() {
         Ok(args) => match search::search(&args).await {
             Ok(res) => {
                 if let Some(res) = res {
-                    print_results(&args.pattern, res)
+                    print_results(&args.pattern, res);
                 }
             }
             Err(err) => Error::handle(&err),

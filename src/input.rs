@@ -8,9 +8,9 @@ use std::{
 use crate::drives::get_available_drive_names;
 
 use super::error::Error;
-use clap::{Arg, ArgAction, Command, value_parser};
+use clap::{Arg, ArgAction, ArgMatches, Command, value_parser};
 
-#[derive(PartialEq, Eq, Clone,Copy)]
+#[derive(PartialEq, Eq, Clone, Copy)]
 pub enum Debug {
     On,
     Off,
@@ -54,7 +54,66 @@ impl Args {
 }
 
 pub fn args() -> Result<Args, Error> {
-    let mut args = Command::new("finder_args")
+    let mut args = match_input_arguments();
+
+    let pattern = match args.try_remove_one::<String>("pattern")? {
+        Some(pat) => pat,
+        None => args
+            .try_remove_one::<String>("pattern_arg")?
+            .expect("pattern or pattern_arg must be present"),
+    };
+
+    let mut selected_drives: HashSet<PathBuf> = args
+        .try_remove_many::<PathBuf>("path")?
+        .map_or_else(HashSet::new, std::iter::Iterator::collect);
+
+    if args.get_flag("current_directory") {
+        selected_drives.insert(env::current_dir()?);
+    }
+
+    if selected_drives.is_empty() {
+        get_available_drive_names()?
+            .into_iter()
+            .map(|drive| Path::new(&format!("{drive}:\\")).into())
+            .for_each(|path| {
+                selected_drives.insert(path);
+            });
+    }
+
+    let debug = if args.get_flag("debug") {
+        Debug::On
+    } else {
+        Debug::Off
+    };
+
+    let output_type = if args.get_flag("no_stream") {
+        OutputType::NoStream
+    } else {
+        OutputType::Stream
+    };
+
+    let only_dir = args.get_flag("dir");
+    let only_file = args.get_flag("file");
+
+    let search_type = if only_dir == only_file {
+        SearchType::Both
+    } else if only_dir {
+        SearchType::Dir
+    } else {
+        SearchType::File
+    };
+
+    Ok(Args::new(
+        Arc::new(pattern),
+        selected_drives,
+        debug,
+        output_type,
+        search_type,
+    ))
+}
+
+fn match_input_arguments() -> ArgMatches {
+    Command::new("finder_args")
         .version(env!("CARGO_PKG_VERSION"))
         .name(env!("CARGO_PKG_NAME"))
         .author(env!("CARGO_PKG_AUTHORS"))
@@ -132,58 +191,5 @@ pub fn args() -> Result<Args, Error> {
             .help("Print the version.")
             .action(ArgAction::Version)
         )
-        .get_matches();
-
-    let pattern = match args.try_remove_one::<String>("pattern")? {
-        Some(pat) => pat,
-        None => args
-            .try_remove_one::<String>("pattern_arg")?
-            .expect("pattern or pattern_arg must be present"),
-    };
-
-    let mut selected_drives: HashSet<PathBuf> = args
-        .try_remove_many::<PathBuf>("path")?
-        .map_or_else(HashSet::new, std::iter::Iterator::collect);
-
-    if args.get_flag("current_directory") {
-        selected_drives.insert(env::current_dir()?);
-    }
-
-    if selected_drives.is_empty() {
-        get_available_drive_names()?
-            .into_iter()
-            .map(|drive| Path::new(&format!("{drive}:\\")).into())
-            .for_each(|path| {
-                selected_drives.insert(path);
-            })
-    }
-
-    let debug = match args.get_flag("debug") {
-        true => Debug::On,
-        false => Debug::Off,
-    };
-
-    let output_type = match args.get_flag("no_stream") {
-        true => OutputType::NoStream,
-        false => OutputType::Stream,
-    };
-
-    let only_dir = args.get_flag("dir");
-    let only_file = args.get_flag("file");
-
-    let search_type = if only_dir == only_file {
-        SearchType::Both
-    } else if only_dir {
-        SearchType::Dir
-    } else {
-        SearchType::File
-    };
-
-    Ok(Args::new(
-        Arc::new(pattern),
-        selected_drives,
-        debug,
-        output_type,
-        search_type,
-    ))
+        .get_matches()
 }

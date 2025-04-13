@@ -37,7 +37,7 @@ impl Debug for Error {
             Error::ChannelRecv(err) => write!(f, "Channel Receiver Error: {err}"),
             Error::DrivesApi(code) => write!(f, "Api Error: {code}"),
             Error::DrivesInvalidNumberOfDrives => write!(f, "Invalid Number of Drives."),
-            Error::IO(err) => write!(f, "{}", err),
+            Error::IO(err) => write!(f, "{err}"),
             Error::SearchIO(err, path) => write!(f, "{}: {}", path.display(), err),
             Error::TokioJoin(err) => write!(f, "Tokio Error: Join Error: {err}"),
         }

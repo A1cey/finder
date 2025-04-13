@@ -19,7 +19,7 @@ pub fn print_match(pattern: &str, path: &Path) {
     let s = path
         .display()
         .to_string()
-        .replace(pattern, format!("\x1b[32m{}\x1b[0m", pattern).as_str());
+        .replace(pattern, format!("\x1b[32m{pattern}\x1b[0m").as_str());
 
-    println!("{}", s);
+    println!("{s}");
 }
