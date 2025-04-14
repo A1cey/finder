@@ -6,7 +6,7 @@ use tokio::sync::mpsc::{self, Receiver, Sender};
 use tokio::task::JoinHandle;
 use tokio_util::sync::CancellationToken;
 
-use crate::input::{Debug, OutputType, SearchType};
+use crate::input::{CaseSensitivity, Debug, OutputType, SearchType};
 use crate::{error::Error, input::Args, output::print_match};
 
 pub struct SearchResult {
@@ -29,11 +29,11 @@ pub async fn search(
 ) -> Result<Option<SearchResult>, Error> {
     let (res_tx, res_rx) = mpsc::channel::<Result<Arc<PathBuf>, Error>>(100);
 
-    let match_path = create_match_path(&args.search_type);
+    let match_path = create_match_path(&args.search_type, &args.case_sensitivity);
 
     let result = match args.output_type {
         OutputType::NoStream => no_stream_processor(args.debug, res_rx),
-        OutputType::Stream => stream_processor(args.pattern.clone(), args.debug, res_rx),
+        OutputType::Stream => stream_processor(args.pattern.clone(), args.debug, res_rx, args.case_sensitivity),
     };
 
     for path in args.selected_drives.clone() {
@@ -165,11 +165,18 @@ async fn process_entry(
     Ok(())
 }
 
-fn create_match_path(search_type: &SearchType) -> fn(&Path, &str) -> bool {
-    match search_type {
-        SearchType::Both => is_match,
-        SearchType::File => |path: &Path, pattern: &str| path.is_file() && is_match(path, pattern),
-        SearchType::Dir => |path: &Path, pattern: &str| path.is_dir() && is_match(path, pattern),
+fn create_match_path(search_type: &SearchType, case_sensitivity: &CaseSensitivity) -> fn(&Path, &str) -> bool {   
+    match case_sensitivity {
+        CaseSensitivity::CaseSensitive => match search_type {
+            SearchType::Both => is_match,
+            SearchType::File => |path: &Path, pattern: &str| path.is_file() && is_match(path, pattern),
+            SearchType::Dir => |path: &Path, pattern: &str| path.is_dir() && is_match(path, pattern),
+        }
+        CaseSensitivity::IgnoreCase => match search_type {
+            SearchType::Both => is_match_ignore_case,
+            SearchType::File => |path: &Path, pattern: &str| path.is_file() && is_match_ignore_case(path, pattern),
+            SearchType::Dir => |path: &Path, pattern: &str| path.is_dir() && is_match_ignore_case(path, pattern),
+        }
     }
 }
 
@@ -180,15 +187,23 @@ fn is_match(path: &Path, pattern: &str) -> bool {
         .is_some_and(|name| name.contains(pattern))
 }
 
+#[inline]
+fn is_match_ignore_case(path: &Path, pattern: &str) -> bool {
+    path.file_name()
+        .and_then(|name| name.to_str())
+        .is_some_and(|name| name.to_lowercase().contains(&pattern.to_lowercase()))
+}
+
 fn stream_processor(
     pattern: Arc<String>,
     debug: Debug,
     mut rx: Receiver<Result<Arc<PathBuf>, Error>>,
+    case_sensitivity: CaseSensitivity
 ) -> JoinHandle<Option<SearchResult>> {
     tokio::spawn(async move {
         while let Some(res) = rx.recv().await {
             match res {
-                Ok(path) => print_match(&pattern, &path),
+                Ok(path) => print_match(&pattern, &path, &case_sensitivity),
                 Err(err) => {
                     if debug == Debug::On {
                         Error::handle(&err);

@@ -26,7 +26,7 @@ async fn run(cancel_token: CancellationToken) {
         Ok(args) => match search::search(&args, cancel_token).await {
             Ok(res) => {
                 if let Some(res) = res {
-                    print_results(&args.pattern, res);
+                    print_results(&args.pattern, res, &args.case_sensitivity);
                 }
             }
             Err(err) => Error::handle(&err),

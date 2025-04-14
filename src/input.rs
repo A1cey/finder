@@ -27,12 +27,19 @@ pub enum SearchType {
     Both,
 }
 
+#[derive(Clone, Copy)]
+pub enum CaseSensitivity {
+    IgnoreCase,
+    CaseSensitive,
+}
+
 pub struct Args {
     pub pattern: Arc<String>,
     pub selected_drives: HashSet<PathBuf>,
     pub debug: Debug,
     pub output_type: OutputType,
     pub search_type: SearchType,
+    pub case_sensitivity: CaseSensitivity,
 }
 
 impl Args {
@@ -42,6 +49,7 @@ impl Args {
         debug: Debug,
         output_type: OutputType,
         search_type: SearchType,
+        case_sensitivity: CaseSensitivity,
     ) -> Self {
         Self {
             pattern,
@@ -49,6 +57,7 @@ impl Args {
             debug,
             output_type,
             search_type,
+            case_sensitivity,
         }
     }
 }
@@ -91,6 +100,12 @@ pub fn args() -> Result<Args, Error> {
     } else {
         OutputType::Stream
     };
+    
+    let case_sensitivity = if args.get_flag("ignore_case") {
+        CaseSensitivity::IgnoreCase
+    } else {
+        CaseSensitivity::CaseSensitive
+    };
 
     let only_dir = args.get_flag("dir");
     let only_file = args.get_flag("file");
@@ -109,6 +124,7 @@ pub fn args() -> Result<Args, Error> {
         debug,
         output_type,
         search_type,
+        case_sensitivity
     ))
 }
 
@@ -161,6 +177,13 @@ fn match_input_arguments() -> ArgMatches {
                     .short('F')
                     .action(ArgAction::SetTrue)
                     .help("Only searches for files.")
+        )
+        .arg(
+            Arg::new("ignore_case")
+                    .short('i')
+                    .long("ignore-case")
+                    .action(ArgAction::SetTrue)
+                    .help("Ignore case when searching for the pattern.")
         )
         .arg(
             Arg::new("debug")
