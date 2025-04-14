@@ -1,44 +1,36 @@
-#![deny(clippy::unwrap_used, clippy::expect_used)]
-
 use error::Error;
-use input::Input;
-use search::SearchResult;
+use input::args;
+use output::print_results;
+use tokio_util::sync::CancellationToken;
 
 mod drives;
 mod error;
 mod input;
+mod output;
 mod search;
 
 #[tokio::main]
 async fn main() {
-    match Input::get_args() {
-        Ok(args) => {
-            if args.no_stream {
-                match search::search_no_stream(args.pattern, args.selected_drives, args.debug).await
-                {
-                    Ok(result) => handle_result(result),
-                    Err(err) => Error::handle(&err),
-                }
-            } else {
-                search::search(args.pattern, args.selected_drives, args.debug).await;
-            };
-        }
-        Err(err) => {
-            Error::handle(&err);
-            return;
+    let token = CancellationToken::new();
+
+    tokio::select! {
+        () = run(token.clone()) => {},
+        _ = tokio::signal::ctrl_c() => {
+            token.cancel();
         }
     }
 }
 
-fn handle_result(result: SearchResult) {
-    println!("Results:");
-    result
-        .found
-        .into_iter()
-        .for_each(|path| println!("{}", path.display()));
-
-    if let Some(errors) = result.errors {
-        println!("Errors:");
-        errors.into_iter().for_each(|err| Error::handle(&err));
+async fn run(cancel_token: CancellationToken) {
+    match args() {
+        Ok(args) => match search::search(&args, cancel_token).await {
+            Ok(res) => {
+                if let Some(res) = res {
+                    print_results(&args.pattern, res, &args.case_sensitivity);
+                }
+            }
+            Err(err) => Error::handle(&err),
+        },
+        Err(err) => Error::handle(&err),
     }
 }

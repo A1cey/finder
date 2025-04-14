@@ -1,74 +1,218 @@
 use std::{
-    collections::{HashSet, VecDeque},
+    collections::HashSet,
+    env,
     path::{Path, PathBuf},
+    sync::Arc,
 };
 
-use crate::error::Error;
+use crate::drives::get_available_drive_names;
 
-enum Args {
-    None,
-    Pattern,
-    Drive,
+use super::error::Error;
+use clap::{Arg, ArgAction, ArgMatches, Command, value_parser};
+
+#[derive(PartialEq, Eq, Clone, Copy)]
+pub enum Debug {
+    On,
+    Off,
 }
 
-pub struct Input {
-    pub pattern: String,
-    pub selected_drives: Option<HashSet<PathBuf>>,
-    pub debug: bool,
-    pub no_stream: bool,
+pub enum OutputType {
+    Stream,
+    NoStream,
 }
 
-impl Input {
-    pub fn get_args() -> Result<Self, Error> {
-        let args = std::env::args().skip(1).collect::<VecDeque<_>>();
+pub enum SearchType {
+    Dir,
+    File,
+    Both,
+}
 
-        if args.is_empty() {
-            Err(Error::IONoArgumentsProvided)?;
+#[derive(Clone, Copy)]
+pub enum CaseSensitivity {
+    IgnoreCase,
+    CaseSensitive,
+}
+
+pub struct Args {
+    pub pattern: Arc<String>,
+    pub selected_drives: HashSet<PathBuf>,
+    pub debug: Debug,
+    pub output_type: OutputType,
+    pub search_type: SearchType,
+    pub case_sensitivity: CaseSensitivity,
+}
+
+impl Args {
+    const fn new(
+        pattern: Arc<String>,
+        selected_drives: HashSet<PathBuf>,
+        debug: Debug,
+        output_type: OutputType,
+        search_type: SearchType,
+        case_sensitivity: CaseSensitivity,
+    ) -> Self {
+        Self {
+            pattern,
+            selected_drives,
+            debug,
+            output_type,
+            search_type,
+            case_sensitivity,
         }
-
-        let mut input = Self {
-            pattern: String::new(),
-            selected_drives: None,
-            debug: false,
-            no_stream: false,
-        };
-
-        let mut flag_with_arg = Args::None;
-
-        for mut arg in args {
-            if arg.starts_with('-') {
-                arg.remove(0);
-
-                if arg == "-search" || arg == "s" {
-                    flag_with_arg = Args::Pattern;
-                } else if arg == "-path" || arg == "p" {
-                    flag_with_arg = Args::Drive;
-                } else if arg == "-debug" {
-                    input.debug = true;
-                } else if arg == "-no-stream" {
-                    input.no_stream = true;
-                } else {
-                    Err(Error::IOInvalidArgumentSpecifier(arg))?;
-                }
-            } else {
-                match flag_with_arg {
-                    Args::None | Args::Pattern => {
-                        if input.pattern.is_empty() {
-                            input.pattern = arg;
-                        } else {
-                            Err(Error::IOInvalidArgument(arg))?;
-                        }
-                    }
-                    Args::Drive => {
-                        input
-                            .selected_drives
-                            .get_or_insert_default()
-                            .insert(Path::new(&arg).into());
-                    }
-                }
-            }
-        }
-
-        Ok(input)
     }
+}
+
+pub fn args() -> Result<Args, Error> {
+    let mut args = match_input_arguments();
+
+    let pattern = match args.try_remove_one::<String>("pattern")? {
+        Some(pat) => pat,
+        None => args
+            .try_remove_one::<String>("pattern_arg")?
+            .expect("pattern or pattern_arg must be present"),
+    };
+
+    let mut selected_drives: HashSet<PathBuf> = args
+        .try_remove_many::<PathBuf>("path")?
+        .map_or_else(HashSet::new, std::iter::Iterator::collect);
+
+    if args.get_flag("current_directory") {
+        selected_drives.insert(env::current_dir()?);
+    }
+
+    if selected_drives.is_empty() {
+        get_available_drive_names()?
+            .into_iter()
+            .map(|drive| Path::new(&format!("{drive}:\\")).into())
+            .for_each(|path| {
+                selected_drives.insert(path);
+            });
+    }
+
+    let debug = if args.get_flag("debug") {
+        Debug::On
+    } else {
+        Debug::Off
+    };
+
+    let output_type = if args.get_flag("no_stream") {
+        OutputType::NoStream
+    } else {
+        OutputType::Stream
+    };
+    
+    let case_sensitivity = if args.get_flag("ignore_case") {
+        CaseSensitivity::IgnoreCase
+    } else {
+        CaseSensitivity::CaseSensitive
+    };
+
+    let only_dir = args.get_flag("dir");
+    let only_file = args.get_flag("file");
+
+    let search_type = if only_dir == only_file {
+        SearchType::Both
+    } else if only_dir {
+        SearchType::Dir
+    } else {
+        SearchType::File
+    };
+
+    Ok(Args::new(
+        Arc::new(pattern),
+        selected_drives,
+        debug,
+        output_type,
+        search_type,
+        case_sensitivity
+    ))
+}
+
+fn match_input_arguments() -> ArgMatches {
+    Command::new("finder_args")
+        .version(env!("CARGO_PKG_VERSION"))
+        .name(env!("CARGO_PKG_NAME"))
+        .author(env!("CARGO_PKG_AUTHORS"))
+        .about(env!("CARGO_PKG_DESCRIPTION"))
+        .arg(
+            Arg::new("pattern")
+                .value_name("PATTERN")
+                .conflicts_with("pattern_arg")
+                .required(true)
+                .help("The pattern to search for. Provide either this positional argument OR the --search flag, but not both.")
+                .num_args(1),
+        )
+        .arg(
+            Arg::new("pattern_arg")
+                .value_name("PATTERN")
+                .short('s')
+                .long("search")
+                .help("The pattern to search for (alternative). Provide either this --search flag OR the positional argument, but not both.")
+                .num_args(1),
+        )
+        .arg(
+            Arg::new("path")
+                .value_name("PATH")
+                .short('p')
+                .long("path")
+                .help("The root path(s) for the search separated by spaces.")
+                .num_args(0..)
+                .value_parser(value_parser!(PathBuf)),
+        )
+        .arg(
+            Arg::new("current_directory")
+                .short('c')
+                .long("current")
+                .action(ArgAction::SetTrue)
+                .help("The current directory is used as the root path for the search.")
+        )
+        .arg(
+            Arg::new("dir")
+                    .short('D')
+                    .action(ArgAction::SetTrue)
+                    .help("Only searches for directories.")
+        )
+        .arg(
+            Arg::new("file")
+                    .short('F')
+                    .action(ArgAction::SetTrue)
+                    .help("Only searches for files.")
+        )
+        .arg(
+            Arg::new("ignore_case")
+                    .short('i')
+                    .long("ignore-case")
+                    .action(ArgAction::SetTrue)
+                    .help("Ignore case when searching for the pattern.")
+        )
+        .arg(
+            Arg::new("debug")
+                .long("debug")
+                .action(ArgAction::SetTrue)
+                .help("Print all errors to the console."),
+        )
+        .arg(
+            Arg::new("no_stream")
+                .long("no-stream")
+                .action(ArgAction::SetTrue)
+                .help("The result of the search will be only returned at the end as one block.\n\
+                    This can have the effect, that all existing results were found\n\
+                    but they are not displayed because some paths are still searched.",
+                ),
+        )
+        .disable_help_flag(true)
+        .arg(Arg::new("help")
+            .short('h')
+            .long("help")
+            .help("Print help info.")
+            .action(ArgAction::Help)
+        )
+        .disable_version_flag(true)
+        .arg(Arg::new("version")
+            .short('v')
+            .long("version")
+            .help("Print the version.")
+            .action(ArgAction::Version)
+        )
+        .get_matches()
 }

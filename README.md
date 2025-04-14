@@ -2,12 +2,13 @@
 
 **_finder_** lets you find your files and directories (currently only on Windows).
 
-**_finder_** was created as a grep clone. It is a **hobby** project.
+**_finder_** was created as a find clone. It is a **hobby** project.
 
 
 ## Usage
 ```
-finder [-s | --search] <search term> [-p | --path <path>] [--debug] [--no-stream]
+finder [-s | --search] <search term> [-p | --path <path>] 
+[-c | --current] [--debug] [--no-stream] [-D | -F] 
 ```
 
 ## Example
@@ -31,7 +32,13 @@ Voilà! You can now use `finder` in your terminal.
 
 ## CLI Flags
 All flags can be changed in their order
-- -s/--search: Specify the <search term> you want to search for. This flag is not needed when the term is specified as the first argument.
-- -p/--path: Specify a path. This path will be considered the root of the search.
+- -s, --search \<search term\>: Specify the <search term> you want to search for. This flag is not needed when the term is specified as the first argument.
+- -p, --path [\<path\> ...]: Specify one or more paths. The paths will be considered the root of the search.
+- c, --current: Specify the current directory as the root of the search.
+- -D: Only searches for directories.
+- -F: Only searches for files.
 - --debug: **_finder_** will print all errors to the console.
 - --no-stream: The result of the search will be only returned at the end as one block. This can have the effect, that all existing results were found but the user does not see them because **_finder_** still searches some paths.
+- -i, --ignore-case: Ignore case when searching for the search term.
+- -h, --help: Print help info.
+- -v, --version: Print the version.

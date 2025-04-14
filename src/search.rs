@@ -1,99 +1,230 @@
-use std::{
-    collections::{HashSet, VecDeque},
-    path::{Path, PathBuf},
-    sync::mpsc::{channel, Sender},
-};
+use std::path::{Path, PathBuf};
+use std::sync::Arc;
 
-use crate::{drives::get_available_drive_names, error::Error};
+use tokio::fs::{DirEntry, ReadDir};
+use tokio::sync::mpsc::{self, Receiver, Sender};
+use tokio::task::JoinHandle;
+use tokio_util::sync::CancellationToken;
+
+use crate::input::{CaseSensitivity, Debug, OutputType, SearchType};
+use crate::{error::Error, input::Args, output::print_match};
 
 pub struct SearchResult {
-    pub found: Vec<PathBuf>,
+    pub found: Vec<Arc<PathBuf>>,
     pub errors: Option<Vec<Error>>,
 }
 
 impl SearchResult {
-    fn new(found: impl Into<Vec<PathBuf>>, errors: Option<impl Into<Vec<Error>>>) -> Self {
-        SearchResult {
+    fn new(found: impl Into<Vec<Arc<PathBuf>>>, errors: Option<impl Into<Vec<Error>>>) -> Self {
+        Self {
             found: found.into(),
             errors: errors.map(std::convert::Into::into),
         }
     }
 }
 
-pub async fn search(pattern: String, selected_drives: Option<HashSet<PathBuf>>, debug: bool) {
-    let drives = if let Some(drives) = selected_drives {
-        drives
-    } else {
-        match get_available_drive_names() {
-            Ok(drives) => drives
-                .into_iter()
-                .map(|drive| Path::new(&format!("{drive}:\\")).into())
-                .collect(),
-            Err(err) => {
-                Error::handle(&err);
+pub async fn search(
+    args: &Args,
+    cancel_token: CancellationToken,
+) -> Result<Option<SearchResult>, Error> {
+    let (res_tx, res_rx) = mpsc::channel::<Result<Arc<PathBuf>, Error>>(100);
+
+    let match_path = create_match_path(&args.search_type, &args.case_sensitivity);
+
+    let result = match args.output_type {
+        OutputType::NoStream => no_stream_processor(args.debug, res_rx),
+        OutputType::Stream => stream_processor(args.pattern.clone(), args.debug, res_rx, args.case_sensitivity),
+    };
+
+    for path in args.selected_drives.clone() {
+        next_dir(
+            args.pattern.clone(),
+            Arc::new(path),
+            res_tx.clone(),
+            match_path,
+            cancel_token.clone(),
+        );
+    }
+
+    drop(res_tx);
+
+    result.await.map_err(Into::into)
+}
+
+fn next_dir(
+    pattern: Arc<String>,
+    path: Arc<PathBuf>,
+    res_tx: Sender<Result<Arc<PathBuf>, Error>>,
+    match_path: fn(&Path, &str) -> bool,
+    cancel_token: CancellationToken,
+) {
+    // The task runs in the background, the handle is dropped
+    // This simplifies this function to not needing to be async preventing async recursion
+    // A Cancellation token is used for the graceful shutdown
+    let handle = tokio::spawn(async move {
+        tokio::select! {
+            () = process_dir(
+                pattern,
+                path,
+                res_tx,
+                match_path,
+                cancel_token.clone()
+            ) => {},
+            () = cancel_token.cancelled() => {}
+        }
+    });
+
+    drop(handle);
+}
+
+async fn process_dir(
+    pattern: Arc<String>,
+    path: Arc<PathBuf>,
+    res_tx: Sender<Result<Arc<PathBuf>, Error>>,
+    match_path: fn(&Path, &str) -> bool,
+    cancel_token: CancellationToken,
+) {
+    match path.metadata() {
+        Ok(metadata) => {
+            if !metadata.is_dir() {
                 return;
             }
         }
+        Err(err) => {
+            let _ = res_tx.send(Err(Error::SearchIO(err, path))).await;
+            return;
+        }
+    }
+
+    let mut dir = match tokio::fs::read_dir(path.as_path()).await {
+        Ok(dir) => dir,
+        Err(err) => {
+            let _ = res_tx.send(Err(Error::SearchIO(err, path))).await;
+            return;
+        }
     };
 
-    let (tx, rx) = channel::<Result<PathBuf, Error>>();
-    let mut tasks = Vec::new();
+    read_dir(&mut dir, pattern, path, res_tx, match_path, cancel_token).await;
+}
 
-    let streamer = tokio::spawn(async move {
-        while let Ok(res) = rx.recv() {
+async fn read_dir(
+    dir: &mut ReadDir,
+    pattern: Arc<String>,
+    path: Arc<PathBuf>,
+    res_tx: Sender<Result<Arc<PathBuf>, Error>>,
+    match_path: fn(&Path, &str) -> bool,
+    cancel_token: CancellationToken,
+) {
+    while let Some(entry) = dir.next_entry().await.transpose() {
+        match entry {
+            Ok(entry) => {
+                if process_entry(
+                    entry,
+                    pattern.clone(),
+                    res_tx.clone(),
+                    match_path,
+                    cancel_token.clone(),
+                )
+                .await
+                .is_err()
+                {
+                    return;
+                }
+            }
+            Err(err) => {
+                let _ = res_tx.send(Err(Error::SearchIO(err, path))).await;
+                return;
+            }
+        }
+    }
+}
+
+async fn process_entry(
+    entry: DirEntry,
+    pattern: Arc<String>,
+    res_tx: Sender<Result<Arc<PathBuf>, Error>>,
+    match_path: fn(&Path, &str) -> bool,
+    cancel_token: CancellationToken,
+) -> Result<(), Error> {
+    let path = Arc::new(entry.path());
+    if match_path(&path, &pattern) {
+        res_tx
+            .send(Ok(path.clone()))
+            .await
+            .map_err(|err| Error::TokioSend(err.to_string()))?;
+    }
+
+    next_dir(
+        pattern.clone(),
+        path,
+        res_tx.clone(),
+        match_path,
+        cancel_token,
+    );
+
+    Ok(())
+}
+
+fn create_match_path(search_type: &SearchType, case_sensitivity: &CaseSensitivity) -> fn(&Path, &str) -> bool {   
+    match case_sensitivity {
+        CaseSensitivity::CaseSensitive => match search_type {
+            SearchType::Both => is_match,
+            SearchType::File => |path: &Path, pattern: &str| path.is_file() && is_match(path, pattern),
+            SearchType::Dir => |path: &Path, pattern: &str| path.is_dir() && is_match(path, pattern),
+        }
+        CaseSensitivity::IgnoreCase => match search_type {
+            SearchType::Both => is_match_ignore_case,
+            SearchType::File => |path: &Path, pattern: &str| path.is_file() && is_match_ignore_case(path, pattern),
+            SearchType::Dir => |path: &Path, pattern: &str| path.is_dir() && is_match_ignore_case(path, pattern),
+        }
+    }
+}
+
+#[inline]
+fn is_match(path: &Path, pattern: &str) -> bool {
+    path.file_name()
+        .and_then(|name| name.to_str())
+        .is_some_and(|name| name.contains(pattern))
+}
+
+#[inline]
+fn is_match_ignore_case(path: &Path, pattern: &str) -> bool {
+    path.file_name()
+        .and_then(|name| name.to_str())
+        .is_some_and(|name| name.to_lowercase().contains(&pattern.to_lowercase()))
+}
+
+fn stream_processor(
+    pattern: Arc<String>,
+    debug: Debug,
+    mut rx: Receiver<Result<Arc<PathBuf>, Error>>,
+    case_sensitivity: CaseSensitivity
+) -> JoinHandle<Option<SearchResult>> {
+    tokio::spawn(async move {
+        while let Some(res) = rx.recv().await {
             match res {
-                Ok(path) => println!("{}", path.display()),
+                Ok(path) => print_match(&pattern, &path, &case_sensitivity),
                 Err(err) => {
-                    if debug {
+                    if debug == Debug::On {
                         Error::handle(&err);
                     }
                 }
             }
         }
-    });
 
-    for path in drives {
-        let tx = tx.clone();
-        let pattern = pattern.clone();
-
-        tasks.push(tokio::spawn(search_dir(path, pattern, tx)));
-    }
-
-    drop(tx);
-
-    for task in tasks {
-        if let Err(err) = task.await {
-            Error::handle(&err.into());
-        }
-    }
-
-    if let Err(err) = streamer.await {
-        Error::handle(&err.into());
-    }
+        None
+    })
 }
 
-pub async fn search_no_stream(
-    pattern: String,
-    selected_drives: Option<HashSet<PathBuf>>,
-    debug: bool,
-) -> Result<SearchResult, Error> {
-    println!("Searching ...");
-
-    let drives = selected_drives.unwrap_or(
-        get_available_drive_names()?
-            .into_iter()
-            .map(|drive| Path::new(&format!("{drive}:\\")).into())
-            .collect(),
-    );
-
-    let (tx, rx) = channel::<Result<PathBuf, Error>>();
-    let mut tasks = Vec::new();
-
-    let search_result = tokio::spawn(async move {
+fn no_stream_processor(
+    debug: Debug,
+    mut rx: Receiver<Result<Arc<PathBuf>, Error>>,
+) -> JoinHandle<Option<SearchResult>> {
+    tokio::spawn(async move {
         let mut found = Vec::new();
-        let mut errors = debug.then_some(Vec::new());
+        let mut errors = (debug == Debug::On).then_some(Vec::new());
 
-        while let Ok(res) = rx.recv() {
+        while let Some(res) = rx.recv().await {
             match res {
                 Ok(path) => found.push(path),
                 Err(err) => {
@@ -104,79 +235,6 @@ pub async fn search_no_stream(
             }
         }
 
-        SearchResult::new(found, errors)
-    });
-
-    for path in drives {
-        let tx = tx.clone();
-        let pattern = pattern.clone();
-
-        tasks.push(tokio::spawn(search_dir(path, pattern, tx)));
-    }
-
-    drop(tx);
-
-    for task in tasks {
-        if let Err(err) = task.await {
-            Error::handle(&err.into());
-        }
-    }
-
-    search_result.await.map_err(std::convert::Into::into)
-}
-
-async fn search_dir(path: PathBuf, pattern: String, tx: Sender<Result<PathBuf, Error>>) {
-    if !path.is_dir() {
-        return;
-    }
-
-    let mut to_search = VecDeque::new();
-    to_search.push_back(path);
-
-    while let Some(path) = to_search.pop_front() {
-        match tokio::fs::read_dir(path).await {
-            Ok(mut dir) => {
-                while let Some(entry) = dir.next_entry().await.transpose() {
-                    match entry {
-                        Ok(entry) => {
-                            let path = entry.path();
-                            if path.to_str().map_or(false, |name| name.contains(&pattern)) {
-                                if let Err(err) = tx.send(Ok(path.clone())) {
-                                    Error::handle(&err.into());
-                                    return;
-                                }
-                            };
-
-                            match entry.metadata().await {
-                                Ok(entry) => {
-                                    if entry.is_dir() {
-                                        to_search.push_back(path);
-                                    }
-                                }
-                                Err(err) => {
-                                    if let Err(err) = tx.send(Err(err.into())) {
-                                        Error::handle(&err.into());
-                                        return;
-                                    }
-                                }
-                            }
-                        }
-                        Err(err) => {
-                            if let Err(err) = tx.send(Err(err.into())) {
-                                Error::handle(&err.into());
-                                return;
-                            }
-                            break;
-                        }
-                    }
-                }
-            }
-            Err(err) => {
-                if let Err(err) = tx.send(Err(err.into())) {
-                    Error::handle(&err.into());
-                    return;
-                }
-            }
-        }
-    }
+        Some(SearchResult::new(found, errors))
+    })
 }

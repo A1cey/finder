@@ -1,11 +1,15 @@
 [package]
 name = "finder"
-version = "0.2.0"
-edition = "2021"
+version = "0.3.0"
+edition = "2024"
+authors = ["Maximilian Schelkle"]
+description = "finder lets you find your files and directories (currently only on Windows). finder was created as a find clone. It is a hobby project."
 
 [dependencies]
 tokio = { version = "1", features = ["full"] }
 bitvec = "1.0.1"
+clap = { version = "4.5.28", features = ["derive"] }
+tokio-util = "0.7.14"
 
 [dependencies.windows]
 version = "0.59.0"
