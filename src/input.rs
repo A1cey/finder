@@ -36,14 +36,14 @@ pub struct Args {
 }
 
 impl Args {
-    fn new(
+    const fn new(
         pattern: Arc<String>,
         selected_drives: HashSet<PathBuf>,
         debug: Debug,
         output_type: OutputType,
         search_type: SearchType,
-    ) -> Args {
-        Args {
+    ) -> Self {
+        Self {
             pattern,
             selected_drives,
             debug,

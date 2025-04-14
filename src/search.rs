@@ -1,8 +1,8 @@
-use std::path::Path;
-use std::{path::PathBuf, sync::Arc};
+use std::path::{Path, PathBuf};
+use std::sync::Arc;
 
 use tokio::fs::{DirEntry, ReadDir};
-use tokio::sync::mpsc::{self, Receiver, Sender, error::SendError};
+use tokio::sync::mpsc::{self, Receiver, Sender};
 use tokio::task::JoinHandle;
 use tokio_util::sync::CancellationToken;
 
@@ -16,7 +16,7 @@ pub struct SearchResult {
 
 impl SearchResult {
     fn new(found: impl Into<Vec<Arc<PathBuf>>>, errors: Option<impl Into<Vec<Error>>>) -> Self {
-        SearchResult {
+        Self {
             found: found.into(),
             errors: errors.map(std::convert::Into::into),
         }
@@ -58,7 +58,7 @@ fn next_dir(
     match_path: fn(&Path, &str) -> bool,
     cancel_token: CancellationToken,
 ) {
-    // The task is run in the background, the handle is dropped
+    // The task runs in the background, the handle is dropped
     // This simplifies this function to not needing to be async preventing async recursion
     // A Cancellation token is used for the graceful shutdown
     let handle = tokio::spawn(async move {
@@ -84,8 +84,16 @@ async fn process_dir(
     match_path: fn(&Path, &str) -> bool,
     cancel_token: CancellationToken,
 ) {
-    if !path.is_dir() {
-        return;
+    match path.metadata() {
+        Ok(metadata) => {
+            if !metadata.is_dir() {
+                return;
+            }
+        }
+        Err(err) => {
+            let _ = res_tx.send(Err(Error::SearchIO(err, path))).await;
+            return;
+        }
     }
 
     let mut dir = match tokio::fs::read_dir(path.as_path()).await {
@@ -108,71 +116,68 @@ async fn read_dir(
     cancel_token: CancellationToken,
 ) {
     while let Some(entry) = dir.next_entry().await.transpose() {
-        if process_entry(
-            entry,
-            pattern.clone(),
-            path.clone(),
-            res_tx.clone(),
-            match_path,
-            cancel_token.clone(),
-        )
-        .await
-        .is_err()
-        {
-            return;
+        match entry {
+            Ok(entry) => {
+                if process_entry(
+                    entry,
+                    pattern.clone(),
+                    res_tx.clone(),
+                    match_path,
+                    cancel_token.clone(),
+                )
+                .await
+                .is_err()
+                {
+                    return;
+                }
+            }
+            Err(err) => {
+                let _ = res_tx.send(Err(Error::SearchIO(err, path))).await;
+                return;
+            }
         }
     }
 }
 
 async fn process_entry(
-    entry: Result<DirEntry, std::io::Error>,
+    entry: DirEntry,
     pattern: Arc<String>,
-    path: Arc<PathBuf>,
     res_tx: Sender<Result<Arc<PathBuf>, Error>>,
     match_path: fn(&Path, &str) -> bool,
     cancel_token: CancellationToken,
-) -> Result<(), SendError<Result<Arc<PathBuf>, Error>>> {
-    match entry {
-        Ok(entry) => {
-            let path = Arc::new(entry.path());
-            if match_path(&path, pattern.as_str()) {
-                res_tx.send(Ok(path.clone())).await?;
-            }
-
-            next_dir(
-                pattern.clone(),
-                path.clone(),
-                res_tx.clone(),
-                match_path,
-                cancel_token,
-            );
-
-            Ok(())
-        }
-        Err(err) => res_tx.send(Err(Error::SearchIO(err, path.clone()))).await,
+) -> Result<(), Error> {
+    let path = Arc::new(entry.path());
+    if match_path(&path, &pattern) {
+        res_tx
+            .send(Ok(path.clone()))
+            .await
+            .map_err(|err| Error::TokioSend(err.to_string()))?;
     }
+
+    next_dir(
+        pattern.clone(),
+        path,
+        res_tx.clone(),
+        match_path,
+        cancel_token,
+    );
+
+    Ok(())
 }
 
 fn create_match_path(search_type: &SearchType) -> fn(&Path, &str) -> bool {
     match search_type {
-        SearchType::Both => {
-            |path: &Path, pattern: &str| path.to_str().is_some_and(|name| name.contains(pattern))
-        }
-        SearchType::File => |path: &Path, pattern: &str| {
-            path.is_file()
-                && path
-                    .file_name()
-                    .and_then(|name| name.to_str())
-                    .is_some_and(|name| name.contains(pattern))
-        },
-        SearchType::Dir => |path: &Path, pattern: &str| {
-            path.is_dir()
-                && path
-                    .file_name()
-                    .and_then(|name| name.to_str())
-                    .is_some_and(|name| name.contains(pattern))
-        },
+        SearchType::Both => is_match,
+        SearchType::File => |path: &Path, pattern: &str| path.is_file() && is_match(path, pattern),
+        SearchType::Dir => |path: &Path, pattern: &str| path.is_dir() && is_match(path, pattern),
     }
+}
+
+#[inline]
+fn is_match(path: &Path, pattern: &str) -> bool {
+    path.file_name()
+        .and_then(|name| name.to_str())
+        .is_some_and(|name| name.contains(pattern))
 }
 
 fn stream_processor(

@@ -14,10 +14,11 @@ pub enum Error {
     IO(io::Error),
     SearchIO(io::Error, Arc<PathBuf>),
     TokioJoin(String),
+    TokioSend(String),
 }
 
 impl Error {
-    pub fn handle(error: &Error) {
+    pub fn handle(error: &Self) {
         eprintln!("\x1b[31mErr\x1b[0m: {error}");
     }
 }
@@ -33,13 +34,14 @@ impl Display for Error {
 impl Debug for Error {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            Error::Args(err) => write!(f, "{err}"),
-            Error::ChannelRecv(err) => write!(f, "Channel Receiver Error: {err}"),
-            Error::DrivesApi(code) => write!(f, "Api Error: {code}"),
-            Error::DrivesInvalidNumberOfDrives => write!(f, "Invalid Number of Drives."),
-            Error::IO(err) => write!(f, "{err}"),
-            Error::SearchIO(err, path) => write!(f, "{}: {}", path.display(), err),
-            Error::TokioJoin(err) => write!(f, "Tokio Error: Join Error: {err}"),
+           Self::Args(err) => write!(f, "{err}"),
+           Self::ChannelRecv(err) => write!(f, "Channel Receiver Error: {err}"),
+           Self::DrivesApi(code) => write!(f, "Api Error: {code}"),
+           Self::DrivesInvalidNumberOfDrives => write!(f, "Invalid Number of Drives."),
+           Self::IO(err) => write!(f, "{err}"),
+           Self::SearchIO(err, path) => write!(f, "{}: {}", path.display(), err),
+           Self::TokioJoin(err) => write!(f, "Tokio Error: Join Error: {err}"),
+           Self::TokioSend(err) => write!(f, "Tokio Error: Send Error: {err}"),
         }
     }
 }
@@ -47,6 +49,12 @@ impl Debug for Error {
 impl From<tokio::task::JoinError> for Error {
     fn from(value: tokio::task::JoinError) -> Self {
         Self::TokioJoin(value.to_string())
+    }
+}
+
+impl<T> From<tokio::sync::mpsc::error::SendError<T>> for Error {
+    fn from(value: tokio::sync::mpsc::error::SendError<T>) -> Self {
+        Self::TokioSend(value.to_string())
     }
 }
 
